@@ -1,2 +1,11 @@
 <h1>NTB is fucking goated</h1>
-<p>Dudes, he made this possible, even with all the mental issues, he tries so hard bruh did you ever seen this shit it isn't even done an looks fucking rad. On NixOS no less, it isn't even organized. Thanks Rust, Cargo, Neorg and all fuck YEAH!1!</p>
+<p>Dudes, he made this possible, even with all the mental issues, he tries so hard bruh did you ever seen this shit it isn't even done an looks fucking rad. On NixOS no less, it isn't even optimized. Thanks Rust, Cargo, Neorg and all fuck YEAH!1!</p><h1>Dual Booting</h1>
+<p>I've struggled to dual boot in the past, when it really shouldn't be that hard. Let's hope that I don't have to deal with that again</p><h2>General Steps</h2>
+<h3>Installing Linux First</h3>
+<ol><li>Get a Linux (Ubuntu or Mint or something with shit on it, not Nix or Arch) live USB</li></ol><ol><li>Get a Windows Install USB</li></ol><ol><li>from the linux USB, open GParted and shrink the main linux partition to create room for windows, you don't have to format it</li></ol><ol><li>Install windows into that new space (it shouldn't create it's own EFI partition, if it does, you might run into an issue described</li></ol><ol><li>You might have to repair the bootloader by booting the live USB and running the boot-repair utility.</li></ol><ol><li>You might have to repair the swap partition.</li></ol><h2>Pitfalls</h2>
+<ul><li>Do Not try to install windows in between two partitions, put it at the very end of your SSD</li></ul><h3>Missing Windows EFI File</h3>
+<p>Missing `/boot/EFI/Microsoft/Boot/*.efi` file. I've summarized the steps in case that link dies.</p><h5>Create EFI partition</h5>
+<ol><li>Shift + f10 in the windows installation media to open command prompt</li></ol><ol><li>`diskpart`</li></ol><ol><li>`list disk`</li></ol><ol><li>`select disk 0` (not necessarily 0)</li></ol><ol><li>`list partition`</li></ol><ol><li>If you need to delete a partition:</li><ol><li>`select partition 3` (not necessarily 3)</li><li>`delete partition override`</li></ol></ol><ol><li>`create partition efi size=100`</li></ol><ol><li>`format quick fs=fat32 label="System"`</li></ol><ol><li>assign an unused letter for the next step:</li><ol><li>`assign letter=K`</li><li>`exit`</li></ol></ol><h5>Fill it with the right files</h5>
+<p>Hopefully that worked, otherwise there are more trouble shooting steps</p><h2>Related</h2>
+<h3>Clean up duplicate UEFI OS entires</h3>
+<p>use the `efibootmgr` tool on linux. This can be repetitive, but it is what it is</p><ol><li>Run `efibootmgr` to see duplicate entires</li></ol>
