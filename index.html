@@ -8,4 +8,167 @@
 <ol><li>Shift + f10 in the windows installation media to open command prompt</li></ol><ol><li>`diskpart`</li></ol><ol><li>`list disk`</li></ol><ol><li>`select disk 0` (not necessarily 0)</li></ol><ol><li>`list partition`</li></ol><ol><li>If you need to delete a partition:</li><ol><li>`select partition 3` (not necessarily 3)</li><li>`delete partition override`</li></ol></ol><ol><li>`create partition efi size=100`</li></ol><ol><li>`format quick fs=fat32 label="System"`</li></ol><ol><li>assign an unused letter for the next step:</li><ol><li>`assign letter=K`</li><li>`exit`</li></ol></ol><h5>Fill it with the right files</h5>
 <p>Hopefully that worked, otherwise there are more trouble shooting steps</p><h2>Related</h2>
 <h3>Clean up duplicate UEFI OS entires</h3>
-<p>use the `efibootmgr` tool on linux. This can be repetitive, but it is what it is</p><ol><li>Run `efibootmgr` to see duplicate entires</li></ol>
+<p>use the `efibootmgr` tool on linux. This can be repetitive, but it is what it is</p><ol><li>Run `efibootmgr` to see duplicate entires</li></ol><h1>Lua notes</h1>
+<h2>What Lua is used for</h2>
+<p>Simple language to make little things in big projects like Games, video editing applications and more. It's fast and easy to implement in other languages.</p><h2>Outputs and Comments</h2>
+<h3>Hello World and Lua shell</h3>
+<p>Lua is like python in regards of how you write hello world and execute it in terminal</p><pre><code class="language-lua">print("Hello World!")
+</code></pre><p>Then in terminal `lua main.lua`, because we named our file main.lua. And it outputs the desired command.</p><p>Lua commands are called <strong>Statements</strong></p><p>I also can enter lua shell. Were this commands also work. And it works also like a calculator. And it can also can divide the numbers correctly. such as 77/45 or 13/2. it outputs numbers like 1.7111111 and 6.5. Which is better compared to pythons 32 bit long numbers.</p><h3>Comments</h3>
+<pre><code class="language-lua">-- this is a comment
+print("hello") -- This is a comment
+--[[
+This is a comment
+print("Yeah, it is a comment ")  Multi line comments are fun
+]]  print("Hello")
+</code></pre><h3>Concatenate</h3>
+<p>To connect 2 strings together use `..`</p><pre><code class="language-lua">print("Hello".."World!".."You sound stupid")
+</code></pre><h2>Data Types and Variables</h2>
+<h3>Types of Variables</h3>
+<p>Variables in Lua can be:</p><li><em>nil</em> - empty</li><li><em>number</em> - 1, 15, 32.2</li><li><em>string</em> - 'words', "cooler words"</li><li><em>boolean</em> - true , false</li><li><em>tables</em> - arrays</li><h3>Define Variable</h3>
+<p>Variables are defined using `local` statement. It can only understand letters and underscores. No numbers(<strong>at the start</strong>) or special symbols Numbers can be used after the first letter</p><pre><code class="language-lua">local damn_cool
+</code></pre><p>In this case it would return `null` or `nil`. We can make it output other things with `=`.</p><li>sting `local damn="not damn"`</li><li>number `local damn=6` or `local damn="6"`</li><li>boolean `local damn=true` or `local damn=false`</li><li>nil `local damn` or `local damn=Brackets`</li><h4>Global Scope Variables</h4>
+<p>This are Variable that can be accessed in multiple files in program. Local files are accessible only in one file in a code base. Global Variables should be typed out with Capital letters. While local variables should start with small</p><pre><code class="language-lua">A=6
+print(A)
+_C.Damn = "OMG"
+</code></pre><h4>Multi line String</h4>
+<p>We can have thous using in our Variable. It involves Tabs, Spaces, Numbers, nil</p><pre><code class="language-lua">local a=[[real
+12
+pairs
+of
+sugar
+rush
+]]
+</code></pre><h4>Boolean</h4>
+<p>Either False or True. True values are: true,0,-1,"" False values are: false, nil</p><h3>Use Variables</h3>
+<h4>We can define repeating string in a sentence to easily change our output</h4>
+<pre><code class="language-lua">local name = "AK-47"
+print(name .. " is the best gun in the world, no gun is better than "..name)
+</code></pre><h4>We can reassign Variables as we write</h4>
+<pre><code class="language-lua">name = "ladas552"
+print(name)
+name = 12
+print(name)
+name = nil
+print(name)
+</code></pre><h4>We can concatenate Variables</h4>
+<pre><code class="language-lua">local name = "Beka"
+local surname = "Kabyshke"
+local FIO = name .. " " .. surname
+print(FIO)
+</code></pre><p>We can also combine variables. In this example it outputs answer"9"</p><pre><code class="language-lua">local number = 4
+local number2 = 5
+local answer = number + number2
+print(answer)
+</code></pre><h3>Know the variable type when you call it</h3>
+<p>Sometimes working with Global Scope variables may require to know what their type is. It is done with `type()` function</p><pre><code class="language-lua">a = true
+print(type(a))
+</code></pre><h2>Math in Lua</h2>
+<h3>Converting a string into a number</h3>
+<p>when we define "22", it becomes a string by default, we want to convert it to plain `22` to do math with it. For it we can use function `tonumber()`</p><pre><code class="language-lua">local a = "12"
+print(type(tonumber(a)))
+</code></pre><h3>Mathematical operators</h3>
+<p>There are a number of mathematical operators we can use in Lua. Most of them are self-explanatory `+,-,*,/,^,(),%`</p><h4>% Modulo operator</h4>
+<p>If we want to find a remainder of a division of 2 numbers we use `%`</p><pre><code class="language-lua">print(10%6)
+</code></pre><p>It finds the remainder for example:for 8/3, it's 2 and 12/6 is 0. But if a number cannot be divided, like 6/10, 10 is larger. Then the output will be 6, the divisible number itself.</p><h5>Mathematical proof</h5>
+<p>There must be a way to mathematically prove every remainder that's possible for division, but I am too stupid to get it, so it will stay like this for a while - <strong>magical operator</strong></p><h3>Math modules</h3>
+<h4>Math constants</h4>
+<p>Pi - `print(math.pi)`. Outputs up to 14th digit</p><h4>Random</h4>
+<li>math.random() - outputs a random number based on a random seed. Can be bound to limits. Only integer numbers, not floating ones `math.random(5)` can output numbers below 5 or 5 `math.random(5,10)` can output numbers from 5 to 10</li><li>math.randomseed() - set's a seed for random numbers</li><li>os.time - get a time in seconds of your pc. can be used to get random seed every second. `math.randomseed(os.time())`</li><h4>Lists</h4>
+<li>math.min() - get the lowest number in the list(10.12, -123, 0, 14)</li><li>math.max() - get the highest number in the list</li><h4>Number manipulation</h4>
+<li>math.floor() - round number down. 3.8 and 3.1 both become 3</li><li>math.ceil() - round number up. 4.8 and 4.1 both become 5</li><li>math.sin() and math.con() and math.tan() - Find trigonometry numbers</li><h2>Strings in Lua</h2>
+<pre><code class="language-lua">a = "Hello"
+b = 'World!'
+c = "Hello " .. 'World!'
+d = [[
+Hello World!]]
+print(a .. ' ' .. b)
+print(c)
+print(d)
+</code></pre><h3>Count symbols</h3>
+<p>The `#` can be used to count number of symbols in a given string. Be it variable or plain `"word"`</p><pre><code class="language-lua">str = "Hello"
+str2 = #"Super Cool"
+print(#str)
+print(#"Hi")
+print(str2)
+</code></pre><p><strong>Can't</strong> be used for anything other then String variables</p><h3>Converting a number into a string</h3>
+<p>You can actually turn any variable into a string with `tostring(variable)` operator. Not just numbers</p><pre><code class="language-lua">x = 22
+y = tostring(x)
+print(type(x) .. ' ' .. type(y))
+</code></pre><h3>String manipulation</h3>
+<p>`string.` function can be used for manipulating strings or outputs.</p><h4>`string.upper`</h4>
+<p>Makes string all uppercase</p><h4>`string.lower`</h4>
+<p>Makes string all lowercase</p><h4>`string.len`</h4>
+<p>Same as `#`, so counts the number of symbols</p><h4>`string.sub`</h4>
+<p>Print certain part of the string. Counts from certain perimeter Including the set numbers. The end coordinate can be set infinitely high, so it always outputs the to the last symbol</p><pre><code class="language-lua">print(string.sub("Hello World", 1 , 6)) -- prints "Hello "
+print(string.sub("Hello World", 7, 99)) --prints "World"
+</code></pre><h4>`string.char`</h4>
+<p>Print an ASCII symbol with set number.</p><p>For Example: `print(string.char(65))` will output `A`</p><h4>`string.byte`</h4>
+<p>Prints number based on ASCII symbol corresponding to the number. For Example: `print(string.byte("A"))` will output `65`.</p><p>You can also set perimeter for what symbols to convert. For example</p><pre><code class="language-lua">print(string.byte("Hello World", 1, 1)) -- gives 72
+print(string.byte("Hello World", 1, 2)) -- gives 72     101
+</code></pre><h4>`string.rep`</h4>
+<p>Repeats the string set number of times separated by a set symbol. 1st define String, 2nd set number, 3rd set separator string.</p><p>For Example: `print(string.rep("Hello", 10, " "))` repeats `Hello` 10 time with spaces in between</p><h4>`string.format`</h4>
+<p>Used to format strings. Like inserting variables in them. Uses place holders to define place for Variables</p><li>`%s`: Placeholder for a string</li><li>`%d` or `%i`: Placeholder for an integer</li><li>`%f`: Placeholder for a floating-point number (decimal)</li><li>`%.nf`: Designates the number of decimal places (e.g. %.2f for two decimal places)</li><li>`%x` or `%X`: Placeholder for a hexadecimal number. Take number and it will give hexadecimal translation</li><li>`%c`: Placeholder for a character. #IDK</li><li>`%%`: Literal % character. Example:</li><pre><code class="language-lua">print(string.format("%s, %d, %f, %x, %.2f, %%, Here you go.", "Hello", 12, 12.514, 255, math.pi))
+-- output: Hello, 12, 12.514000, ff, 3.14, %, Here you go.
+</code></pre><h4>`string.find`</h4>
+<p>Finds perimeter for string in another string and output coordinates. If it can't find string, outputs `nil`</p><p>For Example: `print(string.find("Hello", "Hell"))` gives `1 4`</p><h4>`string.match`</h4>
+<p>Matches string to string. If can't match outputs `nil`</p><p>For Example: `print(string.match("Hello", "He"))` gives `He`</p><pre><code class="language-lua">local str = "Hello World"
+local begin, ending = string.find(str, "orl")
+print(Begin: " .. begin .. "\nEnd: " .. ending)
+</code></pre><h4>`string.gsub`</h4>
+<p>Replace matching string with another string and output how many symbols were changed.</p><p>For Example: `print(string.gsub("Hello World", "o", "!"))` gives `Hell! W!rld 2` OR `print(string.gsub("Hello World", "o", "DAMN"))` gives `HellDAMN WDAMNrld 2`</p><h2>"if" Statements</h2>
+<p>Lua if statements depend on `True` and `False` values. `if true then` will do something, while `if nil then` won't do anything. True can be anything, while False and Nil are the only negatives.</p><p>`then` is needed for a starting statement and not needed more then one</p><pre><code class="language-lua">if true then
+print("Statement was true")
+end
+</code></pre><h3>Comparison operators</h3>
+<p>To determine if something is true or false depending on Comparison.</p><li>`>` - greater than</li><li>`<` - less than</li><li>`>=` - greater or equal to</li><li>`<=` - lesser or equal to</li><li>`~=` - not equal to, similar to `!=` in other languages</li><li>`==` - equal to</li><p>Works both on integers and strings.</p><h4>and</h4>
+<p>Two or more Comparison operators may be checked simultaneously.</p><p>For Example: `if 14>5 and 7==7 then` the program will execute; `if 14>5 and 7==8 then` it will not execute.</p><h4>or</h4>
+<p>Two or more Comparison operators may be checked sequentially.</p><p>For Example: `if false or true then` the program will execute, because the second statement is true.</p><h4>not</h4>
+<p>Swaps the statement. `not false` is `true`, and `not true` is `false`.</p><p>For operators you need to wrap them in parentheses: `if not (age == 18) then`, if age isn't 18, code executes.</p><h3>"if else" Statements</h3>
+<p>Instead of ending the operation without a result, we can use `else` as a false result. For example:</p><pre><code class="language-lua">if 18>20 then
+print("You are blabering nonsense")
+else
+print("yeah, kinda yes")
+end
+</code></pre><h3>"if else and elseif" Statements</h3>
+<p>Now we can have several true statements and run a mild fire. But we also need to use `then` right after the `elseif`. For example:</p><pre><code class="language-lua">if 18>20 then
+print("You are blabering nonsense")
+elseif 18=18 then
+print("Finally, someone with a brain!")
+else
+print("yeah, kinda yes")
+end
+</code></pre><h3>Nesting "if" Statements</h3>
+<p>You can do if statements in if statements if you put another if statements before the `end`. And also put `end` at the end of your nested <strong>"if"</strong> statement</p><pre><code class="language-lua">if 18==18 then
+print("you are lucky today")
+if type(18) == "number" then
+print("You are double lucky")
+end
+else
+print("hmmm")
+end
+</code></pre><h3>Turing Operator/Expression</h3>
+<p>We can define if some variable would be true or false depending on other variable without the use of</p><pre><code class="language-lua">local age = 20
+local old = age > 16 and true or false
+print(old)
+</code></pre><p>In this example, `print(old)` would output `true`, because statement, that `age(20) > 16` is true. Otherwise it would output `old` as `false`. It works because `old` can be either `true` or `false`. And it can be true only if `age>16`, because of `and` operator. So basically it needs to be `true and true`, to return `true`. And if it can't be `true`, it will be `false`</p><h2>Loops</h2>
+<h3>"for" loops</h3>
+<p>Basic for loop reassigns the variable every time it does a loop and count how much each step should be. For example:</p><pre><code class="language-lua">for i = 1, 10, 1 do
+print(i)
+end
+</code></pre><p>This simple structure is from left to right: beginning of a loop, local variable that gets reassigned every loop, beginning number, the <strong>limit</strong> for a variable, <strong>steps</strong> in which number will be changed(by default it is 1 and can be skipped), the equivalent of `then` from if statements. After that, on the next line is out code, and the `end`.</p><p><strong>Steps</strong> can be interpreted as `+` to the current assigned variable. So if the step is `2` and our current variable is `5`, the next variable will be `7`.</p><p>You can also reverse the <strong>steps</strong>, for example: `for i 10, 1, -1` And it will count from 10 to 1.</p><h4>Working with arrays</h4>
+<p>We can extract data from `arrays` with a "for" loop. For example:</p><pre><code class="language-lua">local array = {2, 1, 15, 555, "Damn", 444, 0, nil, -54, 0.514}  for i = 1, #array do
+print(array[i])
+end
+</code></pre><p>it takes the number of data in an array, and uses it as a limit number. In this array there are 8 items, so the limit would be `8` with steps of `1`.</p><h3>"while" loops</h3>
+<p>while something is true, it will run the loop. For example: This will run forever</p><pre><code class="language-lua">while true do
+print{"loop"}
+end
+</code></pre><p>We can also use statements, change variables and all the good stuff to make it no last a century</p><pre><code class="language-lua">local r,ru = true, 0
+while r do
+print("Run: " .. ru)
+if ru == 10 then
+r = false
+end
+ru = ru +1
+end
+</code></pre><h3>"repeat until" loops</h3>
