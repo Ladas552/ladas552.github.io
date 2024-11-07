@@ -1,0 +1,20 @@
+@document.meta
+title: hello norgolith
+description: This is my first post made with Norgolith :D
+authors: [
+  Ladas552
+]
+categories: []
+created: 2024-10-23T14:48:14+06:00
+updated: 2024-10-23T14:14:56
+draft: true
+version: 1.1.1
+@end
+
+* Hello world
+  Oh god i am so exited I will jump off my sit!
+
+  I still don't understand somethings tho, namely:
+  ~ How to theme it
+  ~ How am I suppose to build html straight to github pages
+  ~ Does counting finally work?
