@@ -6,7 +6,7 @@ authors: [
 ]
 categories: []
 created: 2024-10-23T14:48:14+06:00
-updated: 2024-11-11T16:48:40
+updated: 2024-11-11T16:50:39
 draft: true
 version: 1.1.1
 @end
@@ -22,7 +22,11 @@ version: 1.1.1
 
   | conclusion: Meh
 ** Inline code
-  `What about inline stuff? <damn> does this work now???`
+
+   `What about inline stuff? <damn> does this work now???`
+
    They in fact do, wow
+
    Even with `<>` variables and such, cool
+
    | conclusion: wow
