@@ -6,7 +6,7 @@ authors: [
 ]
 categories: []
 created: 2024-10-23T14:48:14+06:00
-updated: 2024-10-23T14:14:56
+updated: 2024-11-11T15:39:12
 draft: true
 version: 1.1.1
 @end
@@ -18,3 +18,5 @@ version: 1.1.1
   ~ How to theme it
   ~ How am I suppose to build html straight to github pages
   ~ Does counting finally work?
+
+  `What about inline stuff? <damn> does this work now???`
