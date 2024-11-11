@@ -6,12 +6,13 @@ authors: [
 ]
 categories: []
 created: 2024-10-23T14:48:14+06:00
-updated: 2024-11-11T15:39:12
+updated: 2024-11-11T16:48:40
 draft: true
 version: 1.1.1
 @end
 
-* Hello world
+* Testing
+** Enumerate lists
   Oh god i am so exited I will jump off my sit!
 
   I still don't understand somethings tho, namely:
@@ -19,4 +20,9 @@ version: 1.1.1
   ~ How am I suppose to build html straight to github pages
   ~ Does counting finally work?
 
+  | conclusion: Meh
+** Inline code
   `What about inline stuff? <damn> does this work now???`
+   They in fact do, wow
+   Even with `<>` variables and such, cool
+   | conclusion: wow
