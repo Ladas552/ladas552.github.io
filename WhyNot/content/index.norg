@@ -6,21 +6,29 @@ authors: [
 ]
 categories: []
 created: 2024-10-23T14:48:14+06:00
-updated: 2024-11-11T16:50:39
+updated: 2024-11-11T16:54:07
 draft: true
 version: 1.1.1
 @end
 
 * Testing
 ** Enumerate lists
-  Oh god i am so exited I will jump off my sit!
+   Oh god i am so exited I will jump off my sit!
 
-  I still don't understand somethings tho, namely:
-  ~ How to theme it
-  ~ How am I suppose to build html straight to github pages
-  ~ Does counting finally work?
+   I still don't understand somethings tho, namely:
+   ~ How to theme it
+   ~~ At
+   ~~ Least
+   ~~ Sublist should
+   ~~ Work
+   ~~ fine
+   ~ How am I suppose to build html straight to github pages
+   ~~ Right?
+   ~~ idk really
+   ~ Does counting finally work?
 
-  | conclusion: Meh
+
+   | conclusion: Meh
 ** Inline code
 
    `What about inline stuff? <damn> does this work now???`
