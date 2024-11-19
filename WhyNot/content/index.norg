@@ -6,12 +6,17 @@ authors: [
 ]
 categories: []
 created: 2024-10-23T14:48:14+06:00
-updated: 2024-11-11T16:54:07
+updated: 2024-11-19T19:46:48
 draft: true
 version: 1.1.1
 @end
 
-* Testing
+* Introduction
+  Welcome! This is a Blog of whoever you might know me as! It will develop with Norgolith's development. A norg based SSG link: https://github.com/NTBBloodbath/norgolith
+
+  So right now just use dark reader or custom CSS to make it readable.
+
+* Testing Norgolith
 ** Enumerate lists
    Oh god i am so exited I will jump off my sit!
 
@@ -28,7 +33,8 @@ version: 1.1.1
    ~ Does counting finally work?
 
 
-   | conclusion: Meh
+   > conclusion: Meh
+
 ** Inline code
 
    `What about inline stuff? <damn> does this work now???`
@@ -37,4 +43,12 @@ version: 1.1.1
 
    Even with `<>` variables and such, cool
 
-   | conclusion: wow
+   > conclusion: wow
+
+** Links
+   They don't work right now
+   `{object}[description]`
+   `[description]{object}`
+   returns a crash on export
+
+   > conclusion: MEH
