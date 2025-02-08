@@ -1,0 +1,22 @@
+@document.meta
+title: Credits
+description: Gratitude to people who helped with the Blog
+authors: ladas552
+categories: [
+  meta
+]
+created: 2025-02-05T10:11:14
+updated: 2025-02-08T05:48:07
+version: 1.1.1
+@end
+
+* Norgolith developer - Alejandro aka {https://github.com/NTBBloodbath}[@NTBBloodbath]
+  Made SSG for norg documents super easy to use. Also was a joy to talk to when testing early Norgolith commits.
+
+  For better of for worse, you wouldn't be reading this without him.
+
+* {https://github.com/nvim-neorg/rust-norg}[rust-norg] parser developers
+  The robust parser that enables reading the norg file by converter. Heavily developed, and in my opinion, integral part of norg's future.
+
+* {https://vhyrro.github.io/}[@Vhyrro]
+  Main inspiration when writing blogs. I do like his style. And basically the guy that got me into Neovim and Neorg

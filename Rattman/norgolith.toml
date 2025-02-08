@@ -1,0 +1,9 @@
+rootUrl = 'http://localhost:3030'
+language = 'en-us'
+title = 'Rattman'
+author = 'ladas552'
+
+# Code blocks highlighting
+[highlighter]
+enable = false
+# engine = 'prism' # Can be 'prism' or 'hljs'. Defaults to 'prism'
