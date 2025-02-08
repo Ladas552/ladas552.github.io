@@ -6,9 +6,11 @@ categories: [
   meta
 ]
 created: 2025-02-05T10:11:14
-updated: 2025-02-08T05:48:07
+updated: 2025-02-08T09:40:50
 version: 1.1.1
 @end
+
+People helped with the Blog, links included.
 
 * Norgolith developer - Alejandro aka {https://github.com/NTBBloodbath}[@NTBBloodbath]
   Made SSG for norg documents super easy to use. Also was a joy to talk to when testing early Norgolith commits.

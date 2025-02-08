@@ -8,11 +8,14 @@ categories: [
   cats
 ]
 created: 2025-02-03T10:11:34
-updated: 2025-02-08T06:06:12
+updated: 2025-02-08T09:34:58
 version: 1.1.1
 @end
 
+* HiO!
+  This post is about my cat, how I got to have her, how it is living with her and so on.
 
+  *With Cat Pictures included!* Have fun.
 * Cat's profile
   ___
   Classic {https://en.m.wikipedia.org/wiki/British_Shorthair}[British Shorthair], yellow eyes, quite a temper and sensitive stomach.
@@ -61,12 +64,13 @@ version: 1.1.1
   Having a cat, or any living being as a pet, is a responsibility not for someone like me to handle. So just petting cats near the household and hearing stories of my classmate class owners was all there was. But life can be unexpected.
 
 ** Hello Little-One
-
+   ___
    And so, the cat owning life begun when I moved in with a relative who got her from a shelter. At first She or Me, or We both, were quite curious of one another. Like Aliens from SMG, she took her time watching around corners, creeping under the bed, and only at night - going hunting for my stumbling legs, walking for a glass of, oh so refreshing, water.
 
    But we settled on quite quickly, I feed her, she eats and when she still wants more, she asks by mewing, or scratching my cloth. Simple barter from what I get pats on her fluffy head.
 
 ** Behavioral changes
+   ___
    Adjusting to the cat owning life takes some merit and adaptation, here are some changes I noticed about myself during this time.
 
 *** *Anxiety*
@@ -94,7 +98,7 @@ version: 1.1.1
 
     So when I wake up, and yes, I sleep on a couch, she will sit right on where my head was a minute ago. And if I rise up, I have to be totally in conscious to not fall back, or She will, and did, scar my face and pierce my ear drums with the outest of tunes mew. Better than coffee btw.
 
-    +html.height 480
+    +html.height 360
     .image ../../assets/cat-pictures/my-seat.jpg
 
 *** *Safety measures*
