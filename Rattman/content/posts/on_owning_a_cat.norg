@@ -21,6 +21,7 @@ version: 1.1.1
   Classic {https://en.m.wikipedia.org/wiki/British_Shorthair}[British Shorthair], yellow eyes, quite a temper and sensitive stomach.
 
   Here, take a look
+  +html.class center
   +html.height 360
   .image ../../assets/cat-pictures/cat-profile.jpg
   Full name - "*Hope Bitch Michelson*". I am not the one to pick it. We generally call her "*Малая*", or "Little One" in translation.
@@ -36,6 +37,7 @@ version: 1.1.1
 
    When she is relaxing, the resembles of an overweight water balloon with fur glued all over is the first thing that comes to mind.
 
+   +html.class center
    +html.height 360
    .image ../../assets/cat-pictures/blob.jpg
 
@@ -98,6 +100,7 @@ version: 1.1.1
 
     So when I wake up, and yes, I sleep on a couch, she will sit right on where my head was a minute ago. And if I rise up, I have to be totally in conscious to not fall back, or She will, and did, scar my face and pierce my ear drums with the outest of tunes mew. Better than coffee btw.
 
+    +html.class center
     +html.height 360
     .image ../../assets/cat-pictures/my-seat.jpg
 
@@ -138,5 +141,6 @@ version: 1.1.1
 
   Thank you for reading my first Blog Post, hope you liked it and cringed from my A2 writing skills as much as I did while writing this. Hope you have a great morning, great day and great evening. Also go star {https://github.com/NTBBloodbath/norgolith}[Norgolith Repo], just because if you liked this, you owe it to them.
 
+  +html.class center
   +html.height 360
   .image ../../assets/cat-pictures/sleepy.jpg
