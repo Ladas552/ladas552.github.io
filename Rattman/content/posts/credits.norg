@@ -1,6 +1,6 @@
 @document.meta
 title: Credits
-description: Gratitude to people who helped with the Blog
+description: Paying gratitude to people who helped with the site
 authors: ladas552
 categories: [
   meta
@@ -10,7 +10,7 @@ updated: 2025-02-08T09:40:50
 version: 1.1.1
 @end
 
-People helped with the Blog, links included.
+People who helped Me with the Blog, links included.
 
 * Norgolith developer - Alejandro aka {https://github.com/NTBBloodbath}[@NTBBloodbath]
   Made SSG for norg documents super easy to use. Also was a joy to talk to when testing early Norgolith commits.
@@ -21,4 +21,7 @@ People helped with the Blog, links included.
   The robust parser that enables reading the norg file by converter. Heavily developed, and in my opinion, integral part of norg's future.
 
 * {https://vhyrro.github.io/}[@Vhyrro]
-  Main inspiration when writing blogs. I do like his style. And basically the guy that got me into Neovim and Neorg
+  Main inspiration when writing blogs. I do like his style. And basically the guy that got me into Neovim and Neorg.
+
+* {https://perfectmotherfuckingwebsite.com/}[Perfect Website CSS]
+  I stole the `style.css` from it because it looks minimal.

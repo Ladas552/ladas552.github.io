@@ -1,2 +1,8 @@
-#serve builds
+#builds from lith serve and lith build
 .build
+public
+
+# pre-commit
+.pre-commit-config.yaml
+.scripts
+
