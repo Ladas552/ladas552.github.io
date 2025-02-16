@@ -1,5 +1,5 @@
 @document.meta
-title: index
+title: Hello
 description: Hub of the Blog
 authors: Ladas552
 categories: [
@@ -19,7 +19,7 @@ version: 1.1.1
 * What is This all about?
   This is my page, one of many, and it will link to other pages. It has minimal css because I am lazy.
 
-  The content of pages might be questionable or useless, but such is life. They will be primarily in English. 
+  The content of pages might be questionable or useless, but such is life. They will be primarily in English.
   *Так что соррян мои русскоговорящие товарищи.*
 
   I won't be posting much of technical articles, but fun or curious subjects of my interests, of which some are listed:
