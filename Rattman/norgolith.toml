@@ -7,3 +7,21 @@ author = 'ladas552'
 [highlighter]
 enable = false
 # engine = 'prism' # Can be 'prism' or 'hljs'. Defaults to 'prism'
+
+# Content Scheme
+## Global options
+[content_schema]
+required = [ "title", "description", "authors", "categories" ]
+
+## field rules
+[content_schema.fields]
+title = { type = "string", max_length = 30 }
+description = { type = "string", max_length = 100 }
+categories = { type = "array", items = { type = "string" }, min_items = 1 }
+
+# publish date for '/posts'
+[content_schema.posts.rules]
+if = { draft = false }
+then = { required = ["publish_date"] } 
+
+
