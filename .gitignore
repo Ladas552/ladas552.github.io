@@ -6,3 +6,6 @@ public
 .pre-commit-config.yaml
 .scripts
 
+# direnv
+.direnv
+
