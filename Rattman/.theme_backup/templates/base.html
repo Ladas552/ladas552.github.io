@@ -45,35 +45,18 @@
     {% endif %}
     {# User-defined styling #}
     {# Tailwind CDN, replace with the Tailwind standalone CLI for production! #}
-    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="/assets/style.css" />
-    <link rel="icon" href="/assets/nix-snowflake-rainbow.svg" />
+    <link rel="icon" href="/assets/norgolith.svg" />
     <title>{% block title %}{% endblock title %} - {{ config.title | title }}</title>
     {% endblock head %}
 </head>
 <body>
-  <div id="content">{% block content %}{% endblock content %}</div>
-  <section>
-    <h2>Recent posts</h2>
-    {% for post in posts | slice(end=5) %}
-    <div>
-    {% if not post.draft %}
-      <div>
-        <h3> {{post.title}}
-          <time datetime="{{ post.created }}">{{ post.created }}</time>
-        </h3>
-      </div>
-      <div class="flex flex-col">
-        <p>{{ post.description | striptags | truncate(length=100) | safe}} </p>
-      </div>
+    <div id="content">{% block content %}{% endblock content %}</div>
+    <div id="footer">
+        {% block footer %}
+        &copy; Copyright {{ now(format="%Y") }} by {{ config.author }}.
+        {% endblock footer %}
     </div>
-{% endif %}
-    {% endfor %}
-  </section>
-  <div id="footer">
-    {% block footer %}
-    &copy; Copyright {{ now(format="%Y") }} by {{ config.author }}.
-    {% endblock footer %}
-  </div>
 </body>
 </html>

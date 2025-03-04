@@ -29,8 +29,3 @@ version: 1.1.1
   - *Vocaloid music*
   - *Complaining on the internet*
 
-* Posts
-** Cats
-   - {:./posts/on_owning_a_cat:}[On Owning A Cat] - Troublesome blob of feline species
-** Meta
-   - {:./posts/credits:}[Credits] - Gratitude to people who helped with the Blog

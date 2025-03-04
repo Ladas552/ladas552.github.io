@@ -56,11 +56,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1740992364,
-        "narHash": "sha256-CwPd5FZmf7ya1oKKT+5n14/GK9NDyu4bsPEMg+TpmVg=",
+        "lastModified": 1741089171,
+        "narHash": "sha256-8rgKjqe4Bap9x11icZsxStivg5aN1k9YfS8eJlqtjBQ=",
         "owner": "NTBBloodbath",
         "repo": "norgolith",
-        "rev": "a3fbee0831d0b490f9baf5c445de7ef1ad1cd5cb",
+        "rev": "e19cf94a379cf563afd9e5db1b985a32fd86b6b0",
         "type": "github"
       },
       "original": {
