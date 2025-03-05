@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="posts">
+        {% for post in posts %}
+            <article>
+                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <p class="meta">By {{ post.author }} on {{ post.created | date(format="%Y-%m-%d") }}</p>
+                <span class="description">{{ post.description }}</span>
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}A
+
+
+  <section>
+    <h2>Recent posts</h2>
+    {% for post in posts | filter(attribute="draft", value=true) %}
+    <div>
+      <div>
+        <h3> <a href="{{ post.permalink }}">{{ post.title }}</a></h3>
+        <p class="meta">Date: {{ post.created | date(format="%Y-%m-%d") }}</p>
+      </div>
+      <div class="flex flex-col">
+        <p>{{ post.description | striptags | truncate(length=100) | safe}} </p>
+      </div>
+    </div>
+    {% endfor %}
+  </section>

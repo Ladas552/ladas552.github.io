@@ -54,20 +54,13 @@
 <body>
   <div id="content">{% block content %}{% endblock content %}</div>
   <section>
-    <h2>Recent posts</h2>
-    {% for post in posts | slice(end=5) %}
-    <div>
-    {% if not post.draft %}
-      <div>
-        <h3> {{post.title}}
-          <time datetime="{{ post.created }}">{{ post.created }}</time>
-        </h3>
-      </div>
-      <div class="flex flex-col">
-        <p>{{ post.description | striptags | truncate(length=100) | safe}} </p>
-      </div>
-    </div>
-{% endif %}
+<hr/>
+<h2>Other Posts</h2>
+    {% for post in posts | filter(attribute="draft", value=false) %}
+    <article>
+        <h2> <a href="{{ post.permalink }}">{{ post.title }}</a></h2>
+        <p class="meta">Date: {{ post.created | date(format="%Y-%m-%d") }}</p><span class="description">{{ post.description }}</span>
+      </article>
     {% endfor %}
   </section>
   <div id="footer">
