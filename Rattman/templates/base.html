@@ -58,7 +58,7 @@
 <h2>Other Posts</h2>
     {% for post in posts | filter(attribute="draft", value=false) %}
     <article>
-        <h2> <a href="{{ post.permalink }}">{{ post.title }}</a></h2>
+        <h2> <a href="{{ metadata.permalink }}">{{ post.title }}</a></h2>
         <p class="meta">Date: {{ post.created | date(format="%Y-%m-%d") }}</p><span class="description">{{ post.description }}</span>
       </article>
     {% endfor %}
