@@ -1,4 +1,4 @@
-rootUrl = 'http://localhost:3030'
+rootUrl = 'https://ladas552.github.io/'
 language = 'en-us'
 title = 'Rattman'
 author = 'ladas552'
@@ -7,6 +7,12 @@ author = 'ladas552'
 [highlighter]
 enable = false
 # engine = 'prism' # Can be 'prism' or 'hljs'. Defaults to 'prism'
+
+# RSS feed
+[rss]
+enable = true
+description = 'Latest posts'
+ttl = 60#
 
 # Content Scheme
 ## Global options

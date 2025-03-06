@@ -1,9 +1,7 @@
 @document.meta
 title: Time Waster
 description: How to waste time without burdening yourself
-authors: [
-  ladas552
-]
+authors: ladas552
 categories: [
   NixOS
   productivity
