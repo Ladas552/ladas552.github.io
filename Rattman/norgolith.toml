@@ -12,7 +12,8 @@ enable = false
 [rss]
 enable = true
 description = 'Latest posts'
-ttl = 60#
+ttl = 60
+image = '/assets/nix-snowflake-rainbow.svg'
 
 # Content Scheme
 ## Global options
@@ -28,6 +29,6 @@ categories = { type = "array", items = { type = "string" }, min_items = 1 }
 # publish date for '/posts'
 [content_schema.posts.rules]
 if = { draft = false }
-then = { required = ["publish_date"] } 
+then = { required = ["publish_date"] }
 
 
