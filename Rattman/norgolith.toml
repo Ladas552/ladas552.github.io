@@ -13,7 +13,7 @@ enable = false
 enable = true
 description = 'Latest posts'
 ttl = 60
-image = '/assets/nix-snowflake-rainbow.svg'
+image = ''
 
 # Content Scheme
 ## Global options
@@ -31,4 +31,23 @@ categories = { type = "array", items = { type = "string" }, min_items = 1 }
 if = { draft = false }
 then = { required = ["publish_date"] }
 
+
+# testing norgowind
+
+# Custom additional configuration options with example values
+[extra]
+license = "GPLv2" # Optional
+footer_author_link = "https://github.com/Ladas552" # Optional
+
+# Link_name = "url"
+# e.g.
+# blog = "/posts"
+# GitHub = "https://github.com/NTBBloodbath/norgolith"
+[extra.nav]
+Github = "https://github.com/Ladas552/ladas552.github.io"
+
+# Link_name = "url"
+# GitHub = "https://github.com/NTBBloodbath/norgolith"
+[extra.footer]
+Github =  "https://github.com/Ladas552/ladas552.github.io"
 

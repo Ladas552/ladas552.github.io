@@ -10,6 +10,9 @@
   {% if metadata.description and not metadata.description == "nil" %}
   <meta name="description" content="{{ metadata.description }}" />
   {% endif %}
+  {% if metadata.authors %}
+  <meta name="author" content="{{ metadata.authors | join(sep=", ") }}" />
+  {% endif %}
   {% if metadata.categories %}
   <meta name="keywords" content="{{ metadata.categories | join(sep=", ") }}" />
   {% endif %}
@@ -106,7 +109,7 @@
 
   {# Styling and favicon #}
   <link rel="stylesheet" href="{{ config.rootUrl }}/assets/css/styles.min.css" />
-  <link rel="icon" href="https://raw.githubusercontent.com/NixOS/nixos-artwork/refs/heads/master/logo/nix-snowflake-rainbow.svg" />
+  <link rel="icon" href="{{ config.rootUrl }}/assets/norgolith.svg" />
 
   <title>{% block title %}{% endblock title %} - {{ config.title | title }}</title>
   {% endblock head %}
