@@ -4,15 +4,18 @@
 {{ content | safe }}
 
 {# Latest 5 non-draft blog posts, ordered automatically by date #}
+<hr>
 <section>
-  <h2>Recent posts</h2>
+  <h2>Posts</h2>
   {% for post in posts | filter(attribute="draft", value=false) %}
-    <div class="bg-surface p-4 mt-4 border-2 border-base-alt rounded-md shadow-lg">
-      <div class="flex flex-col">
-        <h3 class="mt-0! text-text-alt"><a class="no-underline! hover:underline! hover:decoration-dashed" href="{{ post.permalink }}">{{ post.title }}</a></h3>
-        <span class="text-sm text-grey italic">{{ post.description }}</span>
-      </div>
+  <div class="bg-surface p-4 mt-4 border-2 border-base-alt rounded-md shadow-lg">
+    <div class="flex flex-col">
+      <h3 class="mt-0! text-text-alt"><a class="no-underline! hover:underline! hover:decoration-dashed" href="{{ post.permalink }}">{{ post.title }}</a></h3>
+      <span class="text-sm text-grey italic">{{ post.description }}</span>
     </div>
+  </div>
+  <!-- some space before the footer -->
+  <h2></h2>
   {% endfor %}
 </section>
 
