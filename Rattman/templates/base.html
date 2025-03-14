@@ -55,29 +55,11 @@
     <div id="content">{% block content %}{% endblock content %}</div>
     <div id="footer">
       <footer class="bg-[#303040] mt-12 py-4 px-6 w-full font-mono">
-        <div
-            class="flex justify-between items-center font-medium text-xs md:text-sm text-grey"
-            >
-            <span
-                >Copyright &copy; {{ now(format="%Y") }}
-                <a
-                    href="https://ladas552.github.io/"
-                    class="text-blue-400 hover:underline">Main Page</a
-                  ></span
-                >
-                <a
-                    href="https://github.com/Ladas552/ladas552.github.io"
-                    class="hover:text-blue-400"
-                    >
-                    <span>Source code</span>
-                </a>
-
-              <a
-                  href="https://ladas552.github.io/rss.xml"
-                  class="hover:text-blue-400"
-                  >
-                  <span>RSS feed</span>
-              </a>
+        <div class="flex justify-between items-center font-medium text-xs md:text-sm text-grey">
+            <span>Copyright &copy; {{ now(format="%Y") }}
+                <a href="{{ config.rootUrl }}" class="text-blue-400 hover:underline">Main Page</a></span>
+                <a href="https://github.com/Ladas552/ladas552.github.io" class="hover:text-blue-400"><span>Source code</span></a>
+                <a href="https://ladas552.github.io/rss.xml" class="hover:text-blue-400"><span>RSS feed</span></a>
         </div>
       </footer>
     </div>
