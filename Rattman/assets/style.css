@@ -79,6 +79,12 @@ footer {
   width: auto;
 }
 
+/* Customize the scrollbar */
+* {
+  scrollbar-width: thin; /* Width of the scrollbar */
+  scrollbar-color: #64687E #1E1E2E;
+}
+
 /* Inline verbatim `` */
 code {
   font-family: "JetBrains Mono", monospace;
