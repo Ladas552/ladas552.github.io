@@ -20,17 +20,18 @@
       devShells.x86_64-linux =
         let
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          pk = pkgs.writeShellScriptBin;
         in
         {
           default = pkgs.mkShell {
             packages = [
               self.packages.x86_64-linux.default
-              (pkgs.writeShellScriptBin "ser" ''lith serve --drafts'')
-              (pkgs.writeShellScriptBin "serd" ''lith serve --no-drafts'')
-              (pkgs.writeShellScriptBin "build" ''lith build -m'')
-              (pkgs.writeShellScriptBin "new" ''lith new -k norg posts/$1'')
-              (pkgs.writeShellScriptBin "update" ''nix flake update'')
-              (pkgs.writeShellScriptBin "work" # bash
+              (pk "serve" ''lith serve --drafts'')
+              (pk "served" ''lith serve --no-drafts'')
+              (pk "build" ''lith build -m'')
+              (pk "new" ''lith new -k norg posts/$1'')
+              (pk "update" ''nix flake update'')
+              (pk "work" # bash
                 ''
                   ghostty -e "hx ./templates/" &
                   ghostty -e "nvim ./content/" &
