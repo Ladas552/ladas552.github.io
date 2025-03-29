@@ -34,13 +34,14 @@
               (pk "update" ''nix flake update'')
               (pk "deploy" # bash
                 ''
+                  cd ${rootPath}/Rattman
                   rm -r "${rootPath}/assets/"
                   rm -r "${rootPath}/categories"
                   rm -r "${rootPath}/posts"
                   rm "${rootPath}/index.html"
                   rm "${rootPath}/rss.xml"
                   rm -r "${rootPath}/Rattman/.build/"
-                  lith build -m
+                  build
 
                   cp -r ${rootPath}/Rattman/public/* ${rootPath}/
                 ''
