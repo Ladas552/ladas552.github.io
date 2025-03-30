@@ -1,6 +1,8 @@
 #builds from lith serve and lith build
 .build
 public
+# theme
+.theme_backup
 
 # pre-commit
 .pre-commit-config.yaml
