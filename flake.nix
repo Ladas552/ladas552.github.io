@@ -31,6 +31,7 @@
               (pk "served" ''lith serve --no-drafts'')
               (pk "build" ''lith build -m'')
               (pk "new" ''lith new -k norg posts/$1'')
+              (pk "edit" ''nvim ${rootPath}/Rattman/content/posts'')
               (pk "update" ''nix flake update'')
               (pk "deploy" # bash
                 ''
@@ -41,6 +42,9 @@
                   rm "${rootPath}/index.html"
                   rm "${rootPath}/rss.xml"
                   rm -r "${rootPath}/Rattman/.build/"
+                  # rm -r "${rootPath}/Rattman/content/.build/"
+                  # rm -r "${rootPath}/Rattman/content/posts/.build/"
+                  rm -r "${rootPath}/Rattman/public/"
                   build
 
                   cp -r ${rootPath}/Rattman/public/* ${rootPath}/
