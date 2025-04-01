@@ -10,9 +10,9 @@
   {% if metadata.description and not metadata.description == "nil" %}
   <meta name="description" content="{{ metadata.description }}" />
   {% endif %}
-  {% if metadata.authors %}
-  <meta name="author" content="{{ metadata.authors | join(sep=", ") }}" />
-  {% endif %}
+  <!-- {% if metadata.authors %} -->
+  <!-- <meta name="author" content="{# metadata.authors | join(sep=", ") #}" /> -->
+  <!-- {% endif %} -->
   {% if metadata.categories %}
   <meta name="keywords" content="{{ metadata.categories | join(sep=", ") }}" />
   {% endif %}
@@ -109,7 +109,7 @@
 
   {# Styling and favicon #}
   <link rel="stylesheet" href="/assets/css/styles.min.css" />
-  <link rel="icon" href="/assets/norgolith.svg" />
+  <link rel="icon" href="/assets/nix-snowflake-rainbow.svg" />
 
   <title>{% block title %}{% endblock title %} - {{ config.title | title }}</title>
   {% endblock head %}

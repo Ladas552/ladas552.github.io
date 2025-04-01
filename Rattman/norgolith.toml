@@ -32,3 +32,19 @@ if = { draft = false }
 then = { required = ["publish_date"] }
 
 
+# Custom additional configuration options with example values
+[extra]
+license = "GPLv2" # Optional
+footer_author_link = "https://github.com/Ladas552" # Optional
+
+# Link_name = "url"
+# e.g.
+# blog = "/posts"
+# GitHub = "https://github.com/NTBBloodbath/norgolith"
+[extra.nav]
+blog = "/posts"
+Github = "https://github.com/Ladas552/ladas552.github.io"
+# Link_name = "url"
+# GitHub = "https://github.com/NTBBloodbath/norgolith"
+[extra.footer]
+GitHub = "https://github.com/Ladas552/ladas552.github.io"

@@ -65,3 +65,12 @@ layout: post
 
 ## License
 Norgowind is licensed under MIT license.
+
+## FOR LADAS ONLY MOTTACRUCKERS
+disabled this on 10-13 line of base.html because my `metadata.autors` is not working
+```html
+{% if metadata.authors %}
+<meta name="author" content="{{ metadata.authors | join(sep=", ") }}" />
+{% endif %}
+```
+or comment it out by changing `{{}}` to `{##}`
