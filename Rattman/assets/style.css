@@ -22,24 +22,33 @@
     color: #c9d1d9;
     background: #0d1117;
   }
+}
+/* links colors */
+a:link {
+  color: #b4befe;
+  text-decoration: none;
+}
 
-  a:link {
-    color: #58a6ff;
-  }
+a:visited {
+  color: #7E7EFF;
+}
+/* links colors on interactions */
+a:hover {
+  color: #f38ba8;
+}
 
-  a:visited {
-    color: #7E7EFF;
-  }
+a:active {
+  color: #202030;
 }
 
 /* Styling */
 *, *:before, *:after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   color: white;
-  background-color: #202030;
+  background-color: #24273A;
   width: auto;
   max-width: 650px;
   margin: 40px auto;
@@ -139,18 +148,4 @@ pre[class*="language-"].line-numbers > code {
   display: block;
   padding-right: 0.8em;
   text-align: right;
-}
-
-/* Norgolith landing page styling */
-#desc > a,
-#discord-link > a,
-#github-pages > a,
-#github-issues > a {
-  color: var(--color-blue-400);
-}
-#desc > a:hover,
-#discord-link > a:hover,
-#github-pages > a:hover,
-#github-issues > a:hover {
-  text-decoration: underline;
 }

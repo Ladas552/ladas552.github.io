@@ -7,12 +7,12 @@ categories: [
   productivity
 ]
 created: 2025-03-04T12:35:03+05:00
-updated: 2025-03-04T12:35:03+05:00
+updated: 2025-04-02T08:15:04
 draft: true
 version: 1.1.1
 @end
 * HELLo!
-  You might have seen the tags for {:./time_waster:}[this post] and assumed it is a Nix shill.
+  You might have seen the tags for {./}[this post] and assumed it is a Nix shill.
 
   But actually, I want to talk about how much time is spend on Nix, and other tech hobbies.
   ___
@@ -20,4 +20,3 @@ version: 1.1.1
   And they don't have to be, just finding things that are enjoyable is enough for it to be a hobby. Not everything has to be productive. But it is nice, when your hobby doesn't hold back you on things that matter.
 
   So instead of being 100% robotic and 120% on the grind, you can have things unrelated to
-
