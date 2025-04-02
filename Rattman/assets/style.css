@@ -80,6 +80,23 @@ footer {
 	color: #666;
 }
 
+/* Box */
+.flex-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  height: 200px;
+}
+.flex-box {
+  border: 2px solid #8aadf4;
+  background-color: #1e2030;
+  padding: 10px;
+}
+/* css class for descriptions under "recent posts" */
+description {
+  color: #5b6078;
+  font-size: 12px;
+}
 
 .center {
   display: block;
