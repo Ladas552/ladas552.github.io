@@ -56,7 +56,7 @@ body {
   height: 100%;
   font-family: "JetBrains Mono", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   display:flex;
-  flex-direction:column
+  flex-direction:column;
 }
 
 footer {
@@ -83,21 +83,27 @@ footer {
 /* Box */
 .flex-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  flex-direction: column;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  margin: 10px;
   height: 200px;
 }
 .flex-box {
+  display: block;
+  border-radius: 40px;
   border: 2px solid #8aadf4;
   background-color: #1e2030;
   padding: 10px;
+  box-shadow: 0px 0px 10px #8aadf4;
 }
 /* css class for descriptions under "recent posts" */
 description {
-  color: #5b6078;
+  color: #b7bdf8;
   font-size: 12px;
 }
-
+/* center images */
 .center {
   display: block;
   margin-left: auto;
