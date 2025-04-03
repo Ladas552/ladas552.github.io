@@ -43,21 +43,26 @@ a:active {
 
 /* Styling */
 
-body {
+.body {
   color: white;
   background-color: #24273A;
+  font-family: "JetBrains Mono", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  position: relative
+}
+
+.content{
   width: auto;
   max-width: 650px;
   margin: 40px auto;
   padding: 0 10px;
   height: 100%;
-  font-family: "JetBrains Mono", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   display:flex;
   flex-direction:column;
   box-sizing: border-box;
+  position: relative
 }
 
-footer {
+.footer {
 	max-width: 960px;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -76,6 +81,8 @@ footer {
 	text-align: left;
 	font-size: 14px;
 	color: #666;
+	position: absolute;
+  bottom: 0px;
 }
 
 /* Box */
@@ -86,7 +93,6 @@ footer {
   justify-content: space-between;
   gap: 2em;
 	margin: 0 auto;
-  height: 200px;
 }
 .flex-box {
   display: block;

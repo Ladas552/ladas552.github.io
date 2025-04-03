@@ -52,18 +52,10 @@
       <title>{% block title %}{% endblock title %} - {{ config.title | title }}</title>
       {% endblock head %}
   </head>
-  <body>
-    <div id="content">{% block content %}{% endblock content %}</div>
-    <div id="footer">
-      <footer class="bg-[#303040] mt-12 py-4 px-6 w-full font-mono">
-        <div class="flex justify-between items-center font-medium text-xs md:text-sm text-grey">
-            <span>Copyright &copy; {{ now(format="%Y") }}
-                <span><a href="{{ config.rootUrl }}">Home</a></span>
-                <a href="https://github.com/Ladas552/ladas552.github.io"><span>Source<i class="fa fa-github"></i>Code</span></a>
-                <a href="https://ladas552.github.io/rss.xml"><span>RSS<i class="fa fa-rss-square"></i>Feed</span></a>
-            </span>
-        </div>
-      </footer>
-    </div>
+  <body class="body">
+    <div id="content" class="content">{% block content %}{% endblock content %}</div>
+    <footer class="footer">
+      {% include "partials/footer.html" %}
+    </footer>
   </body>
 </html>
