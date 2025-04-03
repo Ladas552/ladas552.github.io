@@ -80,21 +80,23 @@ footer {
 
 /* Box */
 .flex-container {
-  width: 50%;
+  width: auto;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-between;
-  gap: 10px;
-  margin: 10px;
+  gap: 2em;
+	margin: 0 auto;
   height: 200px;
 }
 .flex-box {
   display: block;
-  border-radius: 40px;
+  border-radius: 20px;
   border: 2px solid #8aadf4;
   background-color: #1e2030;
-  padding: 10px;
-  box-shadow: 0px 0px 10px #8aadf4;
+  padding: 1em 1em 1em 1em;
+  box-shadow: 0px 0px 0.7em #8aadf4;
+  width: 40%;
+  height: auto;
 }
 /* css class for descriptions under "recent posts" */
 .flex-box p{

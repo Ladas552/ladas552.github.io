@@ -7,20 +7,20 @@
 <hr>
 <section>
   <h2>Posts</h2>
-  <div class="flex-container" id="flex-container">
-  {% for post in posts | filter(attribute="draft", value=false) %}
+  <div class="flex-container">
+    {% for post in posts | filter(attribute="draft", value=false) %}
+    {# for post in posts #}
     <div class="flex-box" id="flex-box">
-        <h3><a href="{{ post.permalink }}">{{ post.title }} </a></h3>
-        <div id=description>
-          <description>
-          <span>{{ post.description }}</span>
-          <p><span>Released: {{ post.created }}</span></p>
-          </description>
-        </div>
+      <h3><a href="{{ post.permalink }}">{{ post.title }} </a></h3>
+      <div id=description>
+        <description>
+        <span>{{ post.description }}</span>
+        <p><span>Released: {{ post.created }}</span></p>
+        </description>
       </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </section>
 
 {% endblock content %}
