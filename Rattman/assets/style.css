@@ -47,7 +47,8 @@ a:active {
   color: white;
   background-color: #24273A;
   font-family: "JetBrains Mono", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  position: relative
+  position: relative;
+  padding-bottom: 0.5em;
 }
 
 .content{
@@ -63,22 +64,13 @@ a:active {
 }
 
 .footer {
-	max-width: 960px;
-	display: -webkit-box;
-	display: -ms-flexbox;
+  width: 100%;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
 	flex-direction: column;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
 	margin: 0 auto;
 	margin-top:auto;
-	flex: 0 0 50px;
 	padding: 20px 0 0 0;
-	text-align: left;
+	text-align: center;
 	font-size: 14px;
 	color: #666;
 	position: absolute;
