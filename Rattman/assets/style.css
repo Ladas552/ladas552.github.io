@@ -53,24 +53,14 @@ a:active {
 
 .footer {
   width: 100%;
-  max-width: 100%;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: column;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
+	display: flex;
+	flex-direction: row;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
-	margin: 0 auto;
-	margin-top:auto;
-	flex: 0 0 50px;
-	padding: 20px 0 0 0;
 	text-align: center;
-	font-size: 14px;
-	color: #666;
+	font-size: 13px;
+	color: #9E7E75;
 	position: absolute;
   bottom: 0px;
 }

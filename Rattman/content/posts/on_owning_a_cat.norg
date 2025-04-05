@@ -10,7 +10,10 @@ created: 2025-02-08
 version: 1.1.1
 @end
 
-* HiO!
+* On Owning a Cat
+** HiO!
+  ___
+
   This post is about my cat, how I got to have her, how I live with her and so on.
 
   *With Cat Pictures included!* Have fun.
@@ -36,7 +39,7 @@ version: 1.1.1
     When she is relaxing, the resembles of an overweight water balloon with fur glued all over is the first thing that comes to mind.
 
     +html.class center
-    +html.height 360
+    +html.height 240
     .image ../../assets/cat-pictures/blob.jpg
 
 *** Showing affections
@@ -142,5 +145,5 @@ version: 1.1.1
    Thank you for reading my first Blog Post, hope you liked it and cringed from my A2 writing skills as much as I did while writing this. Hope you have a great morning, great day and great evening. Also go star {https://github.com/NTBBloodbath/norgolith}[Norgolith Repo], just because if you liked this, you owe it to them.
 
    +html.class center
-   +html.height 360
+   +html.height 240
    .image ../../assets/cat-pictures/sleepy.jpg
