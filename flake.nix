@@ -28,7 +28,12 @@
             packages = [
               self.packages.x86_64-linux.default
               (pk "serve" ''lith serve --drafts'')
-              (pk "served" ''lith serve --no-drafts'')
+              (pk "serveh" # bash
+                ''
+                  wl-copy "http://192.168.10.7:3030/"
+                  lith serve --drafts --host
+                ''
+              )
               (pk "build" ''lith build -m'')
               (pk "new" ''lith new -k norg posts/$1'')
               (pk "edit" ''nvim ${rootPath}/Rattman/content/posts'')
