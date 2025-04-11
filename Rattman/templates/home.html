@@ -5,7 +5,7 @@
 
 {# Latest 5 non-draft blog posts, ordered automatically by date #}
 <section>
-<hr>
+  <hr>
   <h2>Posts</h2>
   <div class="flex-container">
     {% for post in posts | filter(attribute="draft", value=false) %}
