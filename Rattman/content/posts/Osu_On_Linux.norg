@@ -1,0 +1,22 @@
+@document.meta
+title: Osu on Linux
+description: My experience running osu on Linux and some advice
+authors: [
+  ladas552
+]
+categories: [
+  games
+]
+created: 2025-04-11
+draft: true
+version: 1.1.1
+@end
+
+* Osu on Linux
+** Hey!
+   I play rhythm games for my own amusement. And mostly bobbing to {https://osu.ppy.sh/}[OSU!], which let's you click circles to legally acquired song. And it supports Linux, kinda, most of the time, let me explain.
+
+** Osu Stable
+   Is a classic osu client that most people play on. It *doesn't* support Linux, but works quite well under {https://www.winehq.org/}[WINE], and some community maintained scripts setup low latency and seamless desktop integration for adding maps and skins from `.osu` files
+
+

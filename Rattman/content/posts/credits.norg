@@ -28,3 +28,5 @@ version: 1.1.1
 
 ** Site Icon from {https://github.com/NixOS/nixos-artwork/blob/33856d7837cb8ba76c4fc9e26f91a659066ee31f/logo/nix-snowflake-rainbow.svg}[Nixos-artwork]
    Cool icon under {https://creativecommons.org/licenses/by/4.0/}[CC-BY license]
+** Some CSS tricks from {https://github.com/Axlefublr}[@Axlefublr]
+   Like these heading icons for example

@@ -41,6 +41,51 @@ a:active {
   color: #202030;
 }
 
+/* make bold text red */
+b, strong {
+  color: #EE99A0;
+}
+
+/* change color of headings */
+h1{
+  color: #F5A97F;
+}
+h2{
+  color: #7DC4E4;
+}
+h3{
+  color: #F5A97F;
+}
+h4{
+  color: #A6DA95;
+}
+h5{
+  color: #7DC4E4;
+}
+h6 {
+  color: #7DC4E4;
+}
+
+/* add your own norg icons here*/
+h1::before{
+  content: '◉ ';
+}
+h2::before{
+  content: '◎ ';
+}
+h3::before{
+  content: '○ ';
+}
+h4::before{
+  content: '✺ ';
+}
+h5::before{
+  content: '▶ ';
+}
+h6::before {
+  content: '⤷ ';
+}
+
 /* Styling */
 
 .body {
@@ -103,6 +148,9 @@ a:active {
 .flex-box p{
   color: #b7bdf8;
   font-size: 12px;
+}
+.flex-box h3::before{
+  content: ' ';
 }
 /* center images */
 .center {
