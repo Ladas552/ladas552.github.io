@@ -7,16 +7,129 @@ authors: [
 categories: [
   games
 ]
-created: 2025-04-11
-draft: true
+created: 2025-04-13
+draft: false
 version: 1.1.1
 @end
 
 * Osu on Linux
 ** Hey!
+   ___
    I play rhythm games for my own amusement. And mostly bobbing to {https://osu.ppy.sh/}[OSU!], which let's you click circles to legally acquired song. And it supports Linux, kinda, most of the time, let me explain.
 
 ** Osu Stable
-   Is a classic osu client that most people play on. It *doesn't* support Linux, but works quite well under {https://www.winehq.org/}[WINE], and some community maintained scripts setup low latency and seamless desktop integration for adding maps and skins from `.osu` files
+   ___
+   Is a classic Osu client that most people play on. It *doesn't* support Linux, but works quite well under {https://www.winehq.org/}[WINE], and some community maintained scripts setup low latency and seamless desktop integration for adding maps and skins from `.osu` files.
 
+   I used this {https://osu.ppy.sh/community/forums/topics/1248084?n=1}[install script] (check GitHub for more up to date instructions). Tested on KDE X11, XFCE X11 and BSPWM. Works fantastically and at the time of writing this post \{ *2025-04-13* \} still maintained.
 
+   But can have audio *lag* because Wine compatibility takes some time, but make sure to enable /DXVK/ and if on Nvidia, 32-bit Vulkan compatibility package. On something like Arch Linux it should be your go to OSU! setup.
+
+** Osu Lazer
+   ___
+   But:
+   - Wine and arbitrary scripts have problems running on *FSH'less* OSes, hello /NixOS/,
+   - Maybe you can't bear the *audio lag* from Wine(less than 1/4 of a second),
+   - Annoyed about rare *stuttering* issues,
+   - You want *latest* and greatest features,
+
+   Then you might want to switch to *Lazer*. A leap in Osu clients that got native Linux support! As it is open source, you can build it yourself, but i do not recommend doing so, because networking is disabled for unofficial builds of the game. Which doesn't let you upload scores and chat.
+
+   Instead, download the {https://github.com/ppy/osu/releases}[official appimage], and just play the game. You might need to update *mesa* package to play, also recommend {https://github.com/TheAssassin/AppImageLauncher}[AppImageLauncher] for smooth sailing if it's your first time using appimages.
+
+   Well, you would need to turn on Vulkan (experimental) rendering for better performance. Also don't use the Raw Input setting, it's broken on Linux.
+
+*** NixOS
+    ___
+    But if you don't want to run raw appimages, Osu Lazer is available on `nixpkgs` that auto updates for you, in particular, the `osu-lazer-bin`. But recently I had problems running it on Nvidia GPU (check {https://github.com/NixOS/nixpkgs/issues/372135}[issue])
+
+    Luckily, {https://github.com/fufexan/nix-gaming/tree/master/pkgs/osu-lazer-bin}[Fufexan's gaming flake] got working Osu that also fresher than the `nixpkgs` one. I use it.
+
+    Here's a simple flake structure for ya.
+
+    @code nix
+    {
+      description = "Osu Gaming";
+
+      inputs = {
+        nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+        nix-gaming.url = "github:fufexan/nix-gaming";
+      };
+      outputs =
+        {
+        self,
+        nixpkgs,
+        ...
+        }@inputs:
+        {
+          nixosConfigurations = {
+            NixGamer = nixpkgs.lib.nixosSystem {
+              specialArgs = {
+                inherit inputs;
+              };
+              modules = [
+                ./configuraton.nix
+                inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin ];
+            };
+          };
+        };
+    }
+    @end
+
+** McOsu
+   ___
+   It's an *unofficial* Osu client, that you can download straight from *Steam*. It's minimal, so doesn't ever lag, has a lot of mods for practice and fully local, so no multiplayer features either. Still open source tho.
+
+   You can import your Osu user from the site and go from there. Has some problems with Osu skins, but most should work fine.
+
+** Software
+   ___
+   Well, at least now you can play the game, but to exceed in it you might want to configure hardware that you use. Like *pipewire* for less audio lag, *tablet* area and *mouse* dpi.
+
+*** Open Tablet Drivers (OTG)
+    ___
+    Just {https://github.com/OpenTabletDriver/OpenTabletDriver}[download it], enable the daemon, reboot. If after connecting the tablet, it says that daemon connection is terminated, reopen the app.
+
+    Most tablets should work with it, but if not, check the git version, I used the one from {https://aur.archlinux.org/packages/opentabletdriver-git}[AUR]. If you use source based distribution, good luck building DotNet dependency.
+
+    The git and stable versions can have different configuration formats, so your Osu preset from git can be borked on stable. Just remake it using the GUI.
+
+*** Solaar
+    ___
+    It's a {https://github.com/pwr-Solaar/Solaar}[little application] to change your mouse settings, sensitivity and DPI included. Works perfectly with *LogiTech*.
+
+    Can work with keyboards too, but I never owned the compatible one.
+
+*** Pipewire
+    ___
+    The default (/i hope/) audio system on your Linux distro. Check the guides on how to reduce audio latency, for {https://gist.github.com/Kodehawa/edff6856470ad660a0d69416834b09da}[example]. But here is a little snippet for NixOS users. Just be aware, your headphones can pop or crack, so experiment with this a little.
+
+    @code nix
+    environment.systemPackages = [ pkgs.sbc ];
+    # Enable sound with pipewire.
+    services.pulseaudio.enable = false;
+    security.rtkit.enable = true;
+    services.pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      extraConfig.pipewire."92-low-latency" = {
+        "context.properties" = {
+          "default.clock.rate" = 48000;
+          "default.clock.quantum" = 32;
+          "default.clock.min-quantum" = 32;
+          "default.clock.max-quantum" = 32;
+        };
+      };
+    @end
+
+** Rhythm is just a \*click* away!
+   ___
+   Thanks for reading, hopefully my experience was worth your time. I played *OSU!* for a couple of years now, and basically base my desktop preferences on it.
+
+   Like how my Windows 10 wouldn't run it well, so I switched to Arch Linux. Or how portals broke my X11 install of Osu Lazer, so I switched to Wayland on Niri. Well outside of that, buying my own drawing tablet on birthday and storing 50GB of osu maps, and silver switches on my osu keymaps.
+
+   Rhytm games are great, so I can't say I wasted any of that time and money on useless stuff, because tapping to the songs just gives another type of joy that can't be achieved otherwise.
+
+   Here is my {https://osu.ppy.sh/users/22649018}[Osu profile, if you are interested]. Trow in friend requests, can be mutuals lol.

@@ -5,7 +5,7 @@ author = 'ladas552'
 
 # Code blocks highlighting
 [highlighter]
-enable = false
+enable = true
 # engine = 'prism' # Can be 'prism' or 'hljs'. Defaults to 'prism'
 
 # RSS feed
@@ -30,5 +30,3 @@ categories = { type = "array", items = { type = "string" }, min_items = 1 }
 [content_schema.posts.rules]
 if = { draft = false }
 then = { required = ["publish_date"] }
-
-
