@@ -34,7 +34,7 @@
                   lith serve --drafts --host
                 ''
               )
-              (pk "build" ''lith build -m'')
+              (pk "build" ''lith build --no-minify'')
               (pk "new" ''lith new -k norg posts/$1'')
               (pk "edit" ''nvim ${rootPath}/Rattman/content/posts'')
               (pk "update" ''nix flake update'')
