@@ -4,7 +4,4 @@ var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
   navigator.userAgent.indexOf('CriOS') == -1 &&
   navigator.userAgent.indexOf('FxiOS') == -1;
 
-if (isSafari == true) {
-  window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-}
-
+isSafari && window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
