@@ -9,6 +9,7 @@ categories: [
 ]
 created: 2025-04-13
 draft: false
+meta: false
 version: 1.1.1
 @end
 
@@ -45,10 +46,11 @@ version: 1.1.1
 
     Luckily, {https://github.com/fufexan/nix-gaming/tree/master/pkgs/osu-lazer-bin}[Fufexan's gaming flake] got working Osu that also fresher than the `nixpkgs` one. I use it.
 
-    Here's a simple flake structure for ya.
+    Here's a simple flake structure for ya:
 
     @code nix
     {
+      # you can scroll it
       description = "Osu Gaming";
 
       inputs = {
@@ -64,12 +66,13 @@ version: 1.1.1
         {
           nixosConfigurations = {
             NixGamer = nixpkgs.lib.nixosSystem {
-              specialArgs = {
-                inherit inputs;
-              };
+              specialArgs = { inherit inputs; };
               modules = [
                 ./configuraton.nix
-                inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin ];
+                {
+                  environment.systemPackages = [ inputs.nix-gaming.packages.${pkgs.system}.osu-lazer-bin ];
+                }
+              ];
             };
           };
         };

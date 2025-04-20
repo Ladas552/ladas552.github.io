@@ -25,8 +25,9 @@ required = [ "title", "description", "authors", "categories" ]
 title = { type = "string", max_length = 30 }
 description = { type = "string", max_length = 100 }
 categories = { type = "array", items = { type = "string" }, min_items = 1 }
+meta = { type = "boolean"}
 
 # publish date for '/posts'
 [content_schema.posts.rules]
 if = { draft = false }
-then = { required = ["publish_date"] }
+then = { required = ["created"] }

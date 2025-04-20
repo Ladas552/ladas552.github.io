@@ -171,20 +171,30 @@ h6::before {
   scrollbar-width: thin; /* Width of the scrollbar */
   scrollbar-color: #64687E #1E1E2E;
 }
-
-/* Inline verbatim `` */
+/* inline code blocks */
 code {
   font-family: "JetBrains Mono", monospace;
-  background-color: #303040;
+  background-color: #011627;
   border-radius: 6px;
   padding: 0px 4px;
 }
 
-/* PrismJS specific css */
-pre[class*="language-"],
+/* PrismJS specific css code blocks*/
 code[class*="language-"] {
   text-shadow: unset !important;
   font-family: "JetBrains Mono", monospace !important;
+  background-color: #011627;
+  border-radius: 6px;
+  padding: 0px 4px;
+  pointer-events: none;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  /* white-space: pre-wrap; */
+  /* word-wrap: break-word; */
+}
+
+pre[class*="language-"] {
+  border: 1px solid #f2cdcd;
+  scrollbar-width: none; /* Width of the scrollbar */
 }
 
 /* PrismJS line-numbers plugin */
@@ -198,7 +208,16 @@ pre[class*="language-"].line-numbers > code {
   position: relative;
   white-space: inherit;
 }
+pre[class*="language-"].line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
 
+pre[class*="language-"].line-numbers > code {
+	position: relative;
+	white-space: inherit;
+}
 .line-numbers .line-numbers-rows {
   position: absolute;
   pointer-events: none;
