@@ -30,7 +30,7 @@
               (pk "serve" ''lith serve --drafts'')
               (pk "serveh" # bash
                 ''
-                  wl-copy "$(ip route get 1 | awk '{print $7}')"
+                  wl-copy "http://$(ip route get 1 | awk '{print $7}'):3030"
                   lith serve --drafts --host
                 ''
               )
