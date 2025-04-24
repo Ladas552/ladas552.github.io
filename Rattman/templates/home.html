@@ -8,7 +8,7 @@
   <hr>
   <h2>Posts</h2>
   <div class="flex-container">
-    {% for post in posts | filter(attribute="draft", value=false) | filter(attribute="meta", value=false)  %}
+    {% for post in posts | filter(attribute="draft", value=false) | filter(attribute="meta", value=false) %}
     {# for post in posts #}
     <div class="flex-box" id="flex-box">
       <h3><a href="{{ post.permalink }}">{{ post.title }}</a></h3>

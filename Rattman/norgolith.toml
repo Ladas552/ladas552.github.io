@@ -28,6 +28,6 @@ categories = { type = "array", items = { type = "string" }, min_items = 1 }
 meta = { type = "boolean"}
 
 # publish date for '/posts'
-[content_schema.posts.rules]
+[content_schema.post.rules]
 if = { draft = false }
 then = { required = ["created"] }

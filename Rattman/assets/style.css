@@ -101,7 +101,29 @@ h6::before {
   position: relative;
   padding-bottom: 1em;
 }
+ /* Navigation bar */
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
+.navigation li {
+  float: left;
+}
+
+.navigation li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navigation li a:hover {
+  background-color: #111;
+}
 .footer {
   width: 100%;
 	display: flex;
@@ -158,12 +180,27 @@ h6::before {
 .flex-box h3::before{
   content: ' ';
 }
+/* classes for images */
 /* center images */
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: auto;
+}
+
+.pokemon {
+  flex-direction: row;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5em;
+  padding-bottom: 4em;
+  align-content: space-evenly;
+  text-align: center;
+  flex-direction: row;
+  overflow: hidden;
+  float: left;
 }
 
 /* Customize the scrollbar */

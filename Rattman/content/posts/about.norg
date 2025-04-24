@@ -1,0 +1,39 @@
+@document.meta
+title: About
+description: who is Ladas552?
+authors: [
+  ladas552
+]
+categories: [
+  personal
+]
+created: 2025-04-24
+draft: false
+meta: true
+version: 1.1.1
+@end
+
+* My name is chka-chka, Ladas552
+  I like Biology so much, I am finishing the Biotechnology's bachelor. Using cells to experiment on life forms is so much fun, and structuring everything with Bioinformatics tools is also a big interest of mine.
+
+  But I also pass time in Hobbies like:
+  - *Open Source* projects to sink my stars in;
+  - *Japanese* media of varying type and quality;
+  - *VideoGames* of Rhythm and RolePlaying genres;
+  - *NixOS* for declaring stuff;
+  - Complaining on the internet;
+
+
+  I don't have a permanent profile picture to put there, so here are some of my favorite Pokemon's:
+  +html.class pokemon
+  .image https://img.pokemondb.net/sprites/firered-leafgreen/normal/ninetales.png
+  +html.class pokemon
+  .image https://img.pokemondb.net/sprites/emerald/normal/sceptile.png
+  +html.class pokemon
+  .image https://img.pokemondb.net/sprites/heartgold-soulsilver/normal/torterra.png
+  +html.class pokemon
+  .image https://img.pokemondb.net/sprites/emerald/normal/gligar.png
+
+
+
+
