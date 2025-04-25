@@ -5,3 +5,12 @@ Go to see site by following the [Link](https://ladas552.github.io/)
 
 - smaller image sizes
 used this command to resize: `convert -resize 720x720 -quality 100 image1.jpg image2.jpg`
+
+## Todo
+
+- add code block expandion
+- disable justify text for headings
+- footer
+- better nav bar
+- TOC
+- Pokemons aren't centered
