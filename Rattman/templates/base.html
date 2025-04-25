@@ -34,10 +34,10 @@
     <header class="relative shadow-sm">
       {% include "partials/nav.html" %}
     </header>
-
     {# post content #}
-    <div id="content" class="content">{% block content %}{% endblock content %}</div>
-
+    <main>
+      <div id="content" class="content">{% block content %}{% endblock content %}</div>
+    </main>
     {# footer bar #}
     <footer class="footer">
       {% include "partials/footer.html" %}
