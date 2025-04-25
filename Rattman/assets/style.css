@@ -137,6 +137,19 @@ h7::before {
 	color: #9E7E75;
 	position: absolute;
   bottom: -20px;
+  text-justify: inter-word;
+}
+.footer li {
+  float: left;
+}
+.footer ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+.footer li a {
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 .content{
   width: auto;
