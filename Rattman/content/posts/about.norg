@@ -14,30 +14,35 @@ version: 1.1.1
 @end
 
 * My name is chka-chka, Ladas552
-  I like Biology so much, I am finishing the Biotechnology's bachelor. Using cells to experiment on life forms is so much fun, and structuring everything with Bioinformatics tools is also a big interest of mine.
+** What can I say about myself?
+   ___
+   I like Biology so much, I am finishing the Biotechnology's bachelor. Using cells to experiment on life forms is so much fun, and structuring everything with Bioinformatics tools is also a big interest of mine.
 
-  But I also pass time in Hobbies like:
-  - *Open Source* projects to sink my stars in;
-  - *Japanese* media of varying type and quality;
-  - *VideoGames* of Rhythm and RolePlaying genres;
-  - *NixOS* for declaring stuff;
-  - Complaining on the internet;
+   But I also pass time in Hobbies like:
+   - *Open Source* projects to sink my stars in;
+   - *Japanese* media of varying type and quality;
+   - *VideoGames* of Rhythm and RolePlaying genres;
+   - *NixOS* for declaring stuff;
+   - *Complaining* on the internet;
 
+   ___
+   /Так-же знаю Русский/, но предпочитаю писать на английском.
 
-  I don't have a permanent profile picture to put there, so here are some of my favorite Pokemon's:
-  +html.alt "Ninetails fire gen 1 pokemon"
-  +html.class pokemon
-  .image https://img.pokemondb.net/sprites/firered-leafgreen/normal/ninetales.png
-  +html.alt "Scpetile grass starter gen 3 pokemon"
-  +html.class pokemon
-  .image https://img.pokemondb.net/sprites/emerald/normal/sceptile.png
-  +html.alt "Torterra grass starter gen 4 pokemon"
-  +html.class pokemon
-  .image https://img.pokemondb.net/sprites/heartgold-soulsilver/normal/torterra.png
-  +html.alt "bat like pokemon gen 2 but image is from gen 3"
-  +html.class pokemon
-  .image https://img.pokemondb.net/sprites/emerald/normal/gligar.png
+   I am *not* Russian tho
 
+   ___
+   I don't have a permanent profile picture to put there, so here are some of my favorite Pokemon's:
+   +html.alt "Ninetails fire gen 1 pokemon"
+   +html.class pokemon
+   .image https://img.pokemondb.net/sprites/firered-leafgreen/normal/ninetales.png
+   +html.alt "Scpetile grass starter gen 3 pokemon"
+   +html.class pokemon
+   .image https://img.pokemondb.net/sprites/emerald/normal/sceptile.png
+   +html.alt "Torterra grass starter gen 4 pokemon"
+   +html.class pokemon
+   .image https://img.pokemondb.net/sprites/heartgold-soulsilver/normal/torterra.png
+   +html.alt "bat like pokemon gen 2 but image is from gen 3"
+   +html.class pokemon
+   .image https://img.pokemondb.net/sprites/emerald/normal/gligar.png
 
-
-
+   As you could guess, I don't like putting my pictures out in the wild. And I bet you can't find one online without it being *120x60* quality. But if you monitor my {https://www.instagram.com/ladas553}[instagram], you might get a glimpse. Tho I mostly post my cat there.
