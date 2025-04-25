@@ -25,6 +25,7 @@ version: 1.1.1
    Classic {https://en.m.wikipedia.org/wiki/British_Shorthair}[British Shorthair], yellow eyes, quite a temper and sensitive stomach.
 
    Here, take a look
+   +html.alt "Gray cat sitting on a soft chair in loaf position with crossed paws. Amber eyes and short fur. But whiskers are long"
    +html.class center
    +html.height 360
    .image ../../assets/cat-pictures/cat-profile.jpg
@@ -43,6 +44,7 @@ version: 1.1.1
 
     +html.class center
     +html.height 240
+    +html.alt "cat under the chair, relaxed, too big to fit under the chair in star position, so her head bumps into one of the legs"
     .image ../../assets/cat-pictures/blob.jpg
 
 *** Showing affections
@@ -108,6 +110,7 @@ version: 1.1.1
 
      +html.class center
      +html.height 360
+     +html.alt "cat yawning on a chair near the table. She took my place, she is laying as in about to fall asleep on the side of her body"
      .image ../../assets/cat-pictures/my-seat.jpg
 
 **** Safety measures
@@ -150,4 +153,5 @@ version: 1.1.1
 
    +html.class center
    +html.height 240
+   +html.alt "Cat sleeping on the back of the couch, Cheek first, really pleasant face, paw to the site to touch a pillow"
    .image ../../assets/cat-pictures/sleepy.jpg
