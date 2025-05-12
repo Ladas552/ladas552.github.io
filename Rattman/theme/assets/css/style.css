@@ -249,10 +249,9 @@ code[class*="language-"] {
 
 pre[class*="language-"] {
   border: 1px solid #f2cdcd;
-  scrollbar-width: none; /* Width of the scrollbar */
 }
 
-/* PrismJS line-numbers plugin */
+/* PrismJS line-numbers plugin
 pre[class*="language-"].line-numbers {
   position: relative;
   padding-left: 3.4em;
@@ -279,8 +278,8 @@ pre[class*="language-"].line-numbers > code {
   top: 0;
   font-size: 100%;
   left: -3.8em;
-  width: 3em; /* works for line-numbers below 1000 lines */
-  /* letter-spacing: -1px; */
+  width: 3em; # works for line-numbers below 1000 lines
+  letter-spacing: -1px;
   border-right: 1px solid #999;
 
   -webkit-user-select: none;
@@ -300,4 +299,4 @@ pre[class*="language-"].line-numbers > code {
   display: block;
   padding-right: 0.8em;
   text-align: right;
-}
+} */
