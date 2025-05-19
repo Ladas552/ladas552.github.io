@@ -21,7 +21,6 @@
         let
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           pk = pkgs.writeShellScriptBin;
-          rootPath = ''$(root_dir=$(pwd); while [[ "$root_dir" != "/" ]]; do [[ -f "$root_dir/flake.nix" ]] && { echo "$root_dir"; exit 0; } || root_dir=$(dirname "$root_dir"); done; echo "flake.nix not found" >&2; exit 1)'';
         in
         {
           default = pkgs.mkShell {
@@ -36,23 +35,13 @@
               )
               (pk "build" ''lith build -m'')
               (pk "new" ''lith new -k norg posts/$1'')
-              (pk "edit" ''nvim ${rootPath}/Rattman/content/posts'')
+              (pk "edit" ''nvim ./content/posts'')
               (pk "update" ''nix flake update'')
               (pk "deploy" # bash
                 ''
-                  cd ${rootPath}/Rattman
-                  rm -r "${rootPath}/assets/"
-                  rm -r "${rootPath}/categories"
-                  rm -r "${rootPath}/posts"
-                  rm "${rootPath}/index.html"
-                  rm "${rootPath}/rss.xml"
-                  rm -r "${rootPath}/Rattman/.build/"
-                  # rm -r "${rootPath}/Rattman/content/.build/"
-                  # rm -r "${rootPath}/Rattman/content/posts/.build/"
-                  rm -r "${rootPath}/Rattman/public/"
+                  rm -r "./.build/"
+                  rm -r "./.public/"
                   build
-
-                  cp -r ${rootPath}/Rattman/public/* ${rootPath}/
                 ''
               )
               # (pk "work" # bash
