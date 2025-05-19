@@ -44,16 +44,6 @@
                   build
                 ''
               )
-              # (pk "work" # bash
-              #   ''
-              #     ghostty -e "hx ./templates/" &
-              #     ghostty -e "nvim ./content/" &
-              #     chromium "http://localhost:3030/" "https://ladas552.github.io/" &
-              #     ghostty -e "${pkgs.links2}/bin/links "http://localhost:3030/"" &
-              #     ghostty -e "lith serve -d ~/Projects/my_repos/ladas552.github.io/Rattman"
-              #     niri msg action close-window
-              #   ''
-              # )
             ];
           };
         };
