@@ -1,5 +1,6 @@
 # My Blog
-Go to see site by following the [Link](https://ladas552.github.io/)
+Go to see site by following the [Link](https://ladas552.me/), the
+[ladas552.github.io](https://ladas552.github.io/) also works
 
 ## Reminders
 
