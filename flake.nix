@@ -40,7 +40,7 @@
               (pk "deploy" # bash
                 ''
                   rm -r "./.build/"
-                  rm -r "./.public/"
+                  rm -r "./public/"
                   build
                 ''
               )
