@@ -26,7 +26,7 @@
           default = pkgs.mkShell {
             packages = [
               self.packages.x86_64-linux.default
-              (pk "serve" ''lith serve --drafts'')
+              (pk "serve" ''lith dev --drafts'')
               (pk "serveh" # bash
                 ''
                   wl-copy "http://$(ip route get 1 | awk '{print $7}'):3030"
@@ -37,13 +37,6 @@
               (pk "new" ''lith new -k norg posts/$1'')
               (pk "edit" ''nvim ./content/posts'')
               (pk "update" ''nix flake update'')
-              (pk "deploy" # bash
-                ''
-                  rm -r "./.build/"
-                  rm -r "./public/"
-                  build
-                ''
-              )
             ];
           };
         };
