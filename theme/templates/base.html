@@ -22,6 +22,7 @@
     {# User-defined styling #}
     {# safari hate js #}
     <script src="{{ config.rootUrl }}/assets/js/apple_roll.js"></script>
+    <script src="{{ config.rootUrl }}/assets/js/scroll.js"></script>
     {# css and icons #}
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -39,9 +40,11 @@
     <main>
       <div id="content" class="content">{% block content %}{% endblock content %}</div>
     </main>
+    {% if metadata.title %}
     {# footer bar #}
-    <!-- <footer class="footer"> -->
-    <!-- {% include "partials/footer.html" %} -->
-    <!-- </footer> -->
+    <footer class="footer">
+      {% include "partials/footer.html" %}
+    </footer>
+    {% endif %}
   </body>
 </html>

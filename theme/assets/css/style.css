@@ -2,6 +2,7 @@
 @font-face {
   font-family: "JetBrains Mono";
   font-style: normal;
+  font-optical-sizing: auto;
   font-display: swap;
   font-weight: 100 800;
   src: url(https://cdn.jsdelivr.net/fontsource/fonts/jetbrains-mono:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
@@ -11,10 +12,15 @@
 @font-face {
   font-family: "JetBrains Mono Italic";
   font-style: italic;
+  font-optical-sizing: auto;
   font-display: swap;
   font-weight: 100 800;
   src: url(https://cdn.jsdelivr.net/fontsource/fonts/jetbrains-mono:vf@latest/latin-wght-italic.woff2) format('woff2-variations');
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,28 +28,6 @@
     color: #c9d1d9;
     background: #0d1117;
   }
-}
-/* links colors */
-a:link {
-  color: #b4befe;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #7E7EFF;
-}
-/* links colors on interactions */
-a:hover {
-  color: #f38ba8;
-}
-
-a:active {
-  color: #202030;
-}
-
-/* make bold text red */
-b, strong {
-  color: #EE99A0;
 }
 
 /* change color of headings */
@@ -54,23 +38,23 @@ h1{
 }
 h2{
   color: #7DC4E4;
-   font-size: calc(1.1rem * pow(1.1, 2));
+  font-size: calc(1.1rem * pow(1.1, 2));
 }
 h3{
   color: #F5A97F;
-   font-size: calc(1rem * pow(1.1, 1));
+  font-size: calc(1rem * pow(1.1, 1));
 }
 h4{
   color: #A6DA95;
-   font-size: calc(1rem * pow(1.0, 1));
+  font-size: calc(1rem * pow(1.0, 1));
 }
 h5{
   color: #7DC4E4;
-   font-size: calc(1rem * pow(1.1, 0));
+  font-size: calc(1rem * pow(1.1, 0));
 }
 h6 {
   color: #7DC4E4;
-   font-size: calc(1rem * pow(1.1, -1));
+  font-size: calc(1rem * pow(1.1, -1));
 }
 
 /* add your own norg icons here*/
@@ -103,7 +87,7 @@ h7::before {
   padding-bottom: 1em;
 }
 
- /* Navigation bar */
+/* Navigation bar */
 .navigation ul {
   list-style-type: none;
   margin: 0;
@@ -117,10 +101,12 @@ h7::before {
 
 .navigation li a {
   display: block;
-  color: #9E7E75;
+  color: #9e7375;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  /* transition:background-color ease-in-out 400ms; */
+  transition: background-color ease-in-out 250ms;
 }
 
 .navigation li a:hover {
@@ -128,32 +114,32 @@ h7::before {
   color: white;
 }
 /* Footer */
-.footer {
-  width: 100%;
-	display: flex;
-	flex-direction: row;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-	text-align: center;
-	font-size: 13px;
-	color: #9E7E75;
-	position: absolute;
-  bottom: -20px;
-  text-justify: inter-word;
+/* .footer {
+width: 100%;
+display: flex;
+flex-direction: row;
+-webkit-box-pack: justify;
+-ms-flex-pack: justify;
+justify-content: space-between;
+text-align: center;
+font-size: 13px;
+color: #9E7E75;
+position: absolute;
+bottom: -20px;
+text-justify: inter-word;
 }
 .footer li {
-  float: left;
+float: left;
 }
 .footer ul {
-  list-style-type: none;
-  overflow: hidden;
+list-style-type: none;
+overflow: hidden;
 }
 .footer li a {
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+} */
 /* Main content of the page */
 .content{
   width: auto;
@@ -166,8 +152,30 @@ h7::before {
   box-sizing: border-box;
   position: relative;
   line-height: auto;
-  text-align: justify;
+  text-align: auto;
   text-justify: inter-word;
+}
+
+.content a:link {
+  color: #b4befe;
+  text-decoration: none;
+}
+
+.content a:visited {
+  color: #7E7EFF;
+}
+/* links colors on interactions */
+.content a:hover {
+  color: #f38ba8;
+}
+
+.content a:active {
+  color: #202030;
+}
+
+/* make bold text red */
+.content b, strong {
+  color: #EE99A0;
 }
 
 
@@ -253,50 +261,150 @@ pre[class*="language-"] {
 
 /* PrismJS line-numbers plugin
 pre[class*="language-"].line-numbers {
-  position: relative;
-  padding-left: 3.4em;
-  counter-reset: linenumber;
+position: relative;
+padding-left: 3.4em;
+counter-reset: linenumber;
 }
 
 pre[class*="language-"].line-numbers > code {
-  position: relative;
-  white-space: inherit;
+position: relative;
+white-space: inherit;
 }
 pre[class*="language-"].line-numbers {
-	position: relative;
-	padding-left: 3.8em;
-	counter-reset: linenumber;
+position: relative;
+padding-left: 3.8em;
+counter-reset: linenumber;
 }
 
 pre[class*="language-"].line-numbers > code {
-	position: relative;
-	white-space: inherit;
+position: relative;
+white-space: inherit;
 }
 .line-numbers .line-numbers-rows {
-  position: absolute;
-  pointer-events: none;
-  top: 0;
-  font-size: 100%;
-  left: -3.8em;
-  width: 3em; # works for line-numbers below 1000 lines
-  letter-spacing: -1px;
-  border-right: 1px solid #999;
+position: absolute;
+pointer-events: none;
+top: 0;
+font-size: 100%;
+left: -3.8em;
+width: 3em; # works for line-numbers below 1000 lines
+letter-spacing: -1px;
+border-right: 1px solid #999;
 
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
 }
 
 .line-numbers-rows > span {
-  display: block;
-  counter-increment: linenumber;
+display: block;
+counter-increment: linenumber;
 }
 
 .line-numbers-rows > span:before {
-  content: counter(linenumber);
-  color: #999;
-  display: block;
-  padding-right: 0.8em;
-  text-align: right;
+content: counter(linenumber);
+color: #999;
+display: block;
+padding-right: 0.8em;
+text-align: right;
+} */
+.footer {
+          display: flex;
+            align-items: center;
+            height: 24px;
+            font-size: 12px;
+            font-weight: bold;
+            background-color: #11111b;
+            border-top: 1px solid #313244;
+            user-select: none;
+            width: 100%;
+            flex-direction: row;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            text-align: center;
+            font-size: 13px;
+            color: #9E7E75;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: auto;
+            text-justify: inter-word;
+}
+
+.segment {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 8px;
+  position: relative;
+  min-width: 2em;
+  border-left: solid gray;
+}
+
+.segment a {
+  text-decoration: none;
+}
+
+/* Mode segment */
+.mode {
+  background-color: #89b4fa;
+  color: #11111b;
+  font-weight: bold;
+  border-left: none;
+}
+
+.mode a{
+  color: #11111b;
+}
+
+/* Git branch segment */
+.branch {
+  background-color: #313244;
+  color: #a6e3a1;
+}
+
+.branch a{
+  color: #a6e3a1;
+}
+/* Filename segment */
+.filename {
+  background-color: #313244;
+  color: #cdd6f4;
+  flex: 1;
+  text-align: left;
+  padding-left: 12px;
+}
+
+.filename a{
+  color: #cdd6f4;
+}
+
+.location {
+  background-color: #89b4fa;
+  color: #11111b;
+  font-weight: bold;
+}
+
+.location a{
+  color: #11111b;
+}
+
+/* Icons */
+
+/* Hover effects */
+.segment:hover {
+  opacity: 0.8;
+  cursor: default;
+}
+
+/* Responsive adjustments */
+/* @media (max-width: 768px) {
+.diff-added, .diff-modified, .diff-removed {
+display: none;
+}
+
+.encoding {
+display: none;
+}
 } */
