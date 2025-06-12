@@ -33,6 +33,7 @@
                   lith dev --drafts --host
                 ''
               )
+              (pk "preview" ''lith preview'')
               (pk "build" ''lith build -m'')
               (pk "new" ''lith new -k norg posts/$1'')
               (pk "edit" ''nvim ./content/posts'')
