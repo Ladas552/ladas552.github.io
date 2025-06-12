@@ -11,6 +11,8 @@ function updateScrollPercentage() {
 
 // Update on scroll
 window.addEventListener('scroll', updateScrollPercentage);
+// Update on window resize
+window.addEventListener('resize', updateScrollPercentage);
 
 // Update on page load
 document.addEventListener('DOMContentLoaded', updateScrollPercentage);
