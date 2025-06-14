@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rattman</title>
+    <link>https://ladas552.me</link>
+    <description>Latest posts</description>
+    <generator>Norgolith</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Jun 2025 20:47:05 +0000</lastBuildDate>
+    <ttl>60</ttl>
+    <atom:link href="https:&#x2F;&#x2F;ladas552.me/rss.xml" rel="self" type="application/rss+xml" />
+
+    <image>
+      <url>https://ladas552.me&#x2F;assets&#x2F;nix-snowflake-rainbow.svg</url>
+      <title>Rattman</title>
+      <link>https://ladas552.me</link>
+      <width>144</width>
+      <height>144</height>
+    </image>
+
+    
+    <item>
+      <title>On Owning a Cat</title>
+      <link>https://ladas552.me/posts/on_owning_a_cat/</link>
+      <guid>https://ladas552.me/posts/on_owning_a_cat/</guid>
+      <description>Troublesome blob of feline species</description>
+      <author>Ladas552</author>
+      <pubDate>Sat, 08 Feb 2025 00:00:00 +0000</pubDate>
+      <category>cats</category>
+    </item>
+    
+    <item>
+      <title>Osu on Linux</title>
+      <link>https://ladas552.me/posts/Osu_On_Linux/</link>
+      <guid>https://ladas552.me/posts/Osu_On_Linux/</guid>
+      <description>My experience running Osu on Linux and some advice</description>
+      <author>Ladas552</author>
+      <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+      <category>games</category>
+    </item>
+    
+  </channel>
+</rss>
