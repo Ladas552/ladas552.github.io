@@ -40,13 +40,13 @@
 /* Mode segment */
 .mode {
   background-color: #89b4fa;
-  color: #11111b;
+  color: #0d1117;
   font-weight: bold;
   border-left: none;
 }
 
 .mode a{
-  color: #11111b;
+  color: #0d1117;
 }
 
 /* Git branch segment */
@@ -58,6 +58,7 @@
 .branch a{
   color: #a6e3a1;
 }
+
 /* Filename segment */
 .filename {
   background-color: #313244;
@@ -68,17 +69,21 @@
 }
 
 .filename a{
-  color: #cdd6f4;
+  color: #c9d1d9;
+}
+
+.filename i{
+  color: #4878be;
 }
 
 .location {
   background-color: #89b4fa;
-  color: #11111b;
+  color: #0d1117;
   font-weight: bold;
 }
 
 .location a{
-  color: #11111b;
+  color: #0d1117;
 }
 
 /* Icons */
