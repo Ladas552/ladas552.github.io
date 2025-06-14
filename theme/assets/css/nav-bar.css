@@ -1,0 +1,30 @@
+/* Navigation bar */
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+    border-bottom: 2px solid red;
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+
+}
+
+.navigation li {
+  float: left;
+}
+
+.navigation li a {
+  display: block;
+  color: #9e7375;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  /* transition:background-color ease-in-out 400ms; */
+  transition: background-color ease-in-out 250ms;
+}
+
+.navigation li a:hover {
+  background-color: #111;
+  color: white;
+}

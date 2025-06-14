@@ -1,0 +1,101 @@
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #11111b;
+  border-top: 1px solid #313244;
+  user-select: none;
+  width: 100%;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 13px;
+  color: #9E7E75;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: auto;
+  text-justify: inter-word;
+}
+
+.segment {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 8px;
+  position: relative;
+  min-width: 2em;
+  border-left: solid gray;
+}
+
+.segment a {
+  text-decoration: none;
+}
+
+/* Mode segment */
+.mode {
+  background-color: #89b4fa;
+  color: #11111b;
+  font-weight: bold;
+  border-left: none;
+}
+
+.mode a{
+  color: #11111b;
+}
+
+/* Git branch segment */
+.branch {
+  background-color: #313244;
+  color: #a6e3a1;
+}
+
+.branch a{
+  color: #a6e3a1;
+}
+/* Filename segment */
+.filename {
+  background-color: #313244;
+  color: #cdd6f4;
+  flex: 1;
+  text-align: left;
+  padding-left: 12px;
+}
+
+.filename a{
+  color: #cdd6f4;
+}
+
+.location {
+  background-color: #89b4fa;
+  color: #11111b;
+  font-weight: bold;
+}
+
+.location a{
+  color: #11111b;
+}
+
+/* Icons */
+
+/* Hover effects */
+.segment:hover {
+  opacity: 0.8;
+  cursor: default;
+}
+
+/* Responsive adjustments */
+/* @media (max-width: 768px) {
+.diff-added, .diff-modified, .diff-removed {
+display: none;
+}
+
+.encoding {
+display: none;
+}
+} */
