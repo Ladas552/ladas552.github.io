@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="assets/rss.xsl" type="text/xsl"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>{{ config.title }}</title>
@@ -18,7 +19,7 @@
       <height>144</height>
     </image>
 
-    {% for post in posts | filter(attribute="draft", value=false) | filter(attribute="meta", value=false) %}
+    {% for post in posts | filter(attribute="draft", value=false) %}
     <item>
       <title>{{ post.title }}</title>
       <link>{{ post.permalink | escape_xml | safe }}</link>
