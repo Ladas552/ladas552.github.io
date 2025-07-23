@@ -98,12 +98,12 @@
 }
 
 /* Responsive adjustments */
-/* @media (max-width: 768px) {
-.diff-added, .diff-modified, .diff-removed {
-display: none;
-}
+@media (max-width: 240px) {
+  .branch {
+    display: none;
+  }
 
-.encoding {
-display: none;
+  .encoding {
+    display: none;
+  }
 }
-} */
