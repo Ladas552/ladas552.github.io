@@ -7,6 +7,9 @@ Go to see site by following the [Link](https://ladas552.me/), the
 - smaller image sizes
 used this command to resize: `convert -resize 720x720 -quality 100 image1.jpg image2.jpg`
 
+- nerdfonts
+modified nerdfontsOnlySymbols file with fontforge-gtk to only have like 4 symbols, and import it using css from nerdfonts github repo, it decreases the size user needs to download to see icons
+
 ## Todo
 
 - add code block expansion
