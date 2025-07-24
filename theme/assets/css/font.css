@@ -51,7 +51,7 @@
 }
 
 .nf-md-source_branch:before {
-  content: "\f062c";
+  content: "\e725";
 }
 
 .nf-dev-nixos:before {
