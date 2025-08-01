@@ -19,3 +19,4 @@ modified nerdfontsOnlySymbols file with fontforge-gtk to only have like 4 symbol
 - I want a [project oriented pages too](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages#using-a-custom-domain-across-multiple-repositories)
 - better rss.xml theme, like [boltless](https://github.com/boltlessengineer/boltlessengineer.github.io/blob/989b409505d56f2c9fcbaf3cec1db8aac52156c7/templates/rss.xml#L2)
 - make `/posts` directory better themed in `posts.html` template
+- Discord link is broken in about page, need fix
