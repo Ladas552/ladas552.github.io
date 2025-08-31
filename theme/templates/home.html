@@ -7,7 +7,7 @@
 <section>
   <div class="flex-container">
     {% for post in posts %}
-    <div class="flex-box" id="flex-box" onclick="location.href='{{ post.permalink }}';" style="cursor: pointer;">
+    <div class="flex-box" onclick="location.href='{{ post.permalink }}';" style="cursor: pointer;">
       <h3>{{ post.title }}</h3>
       <div id=description>
         <description>
