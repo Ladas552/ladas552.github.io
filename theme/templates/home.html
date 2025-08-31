@@ -6,8 +6,7 @@
 {# Latest 5 non-draft blog posts, ordered automatically by date #}
 <section>
   <div class="flex-container">
-    {% for post in posts | filter(attribute="draft", value=false) %}
-    {# for post in posts #}
+    {% for post in posts %}
     <div class="flex-box" id="flex-box" onclick="location.href='{{ post.permalink }}';" style="cursor: pointer;">
       <h3>{{ post.title }}</h3>
       <div id=description>
