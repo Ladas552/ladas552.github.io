@@ -30,7 +30,6 @@
   padding: 0 8px;
   position: relative;
   min-width: 2em;
-  border-left: solid gray;
 }
 
 .segment a {
@@ -51,7 +50,7 @@
 
 /* Git branch segment */
 .branch {
-  background-color: #313244;
+  background-color: #8866;
   color: #a6e3a1;
 }
 
