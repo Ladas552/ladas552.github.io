@@ -1,0 +1,138 @@
+/* Catppuccin Macchiato Color Palette */
+:root {
+  --base: #24273A;
+  --mantle: #1E2030;
+  --surface0: #363A4F;
+  --rosewater: #F4DBD6;
+  --peach: #F5A97F;
+  --text: #c9d1d9;
+  --lavender: #B7BDF8;
+  --shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Hide checkbox */
+#toc-toggle {
+  display: none;
+}
+
+/* Button Styling */
+.toc-button {
+  position: fixed;
+  right: 15px;
+  top: 15%;
+  transform: translateY(0);
+  background: var(--mantle);
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, right 0.2s ease;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+}
+
+.toc-button:hover {
+  background: var(--surface0);
+}
+
+.toc-button::before {
+  content: "➤";
+  font-size: 18px;
+  color: var(--rosewater);
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+
+#toc-toggle:checked ~ .toc-button::before {
+  transform: rotate(0deg);
+}
+
+#toc-toggle:checked ~ .toc-button {
+  right: 375px;
+}
+
+/* Table of Contents Panel */
+.toc-panel {
+  position: fixed;
+  right: -360px;
+  top: 15%;
+  height: auto;
+  width: 360px;
+  background: var(--mantle);
+  border-radius: 8px;
+  border: 1px solid var(--surface0);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+  z-index: 999;
+  overflow-y: visible;
+}
+
+#toc-toggle:checked ~ .toc-panel {
+  transform: translateX(-360px);
+}
+
+/* Unordered List Styling */
+.toc-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-content li {
+  padding-left: 0.25rem; /* Single whitespace indentation */
+  padding-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.toc-content ul ul {
+  padding-left: 0.5rem; /* Double whitespace for nested levels */
+}
+
+.toc-content ul ul ul {
+  padding-left: 0.75rem; /* Triple whitespace for deeper nesting */
+}
+
+/* Links Styling */
+.toc-content a[href] {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.toc-content a[href]:hover {
+  background: var(--surface0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .toc-button {
+    width: 32px;
+    height: 32px;
+    right: 10px;
+  }
+
+  #toc-toggle:checked ~ .toc-button {
+    right: 295px;
+  }
+
+  .toc-panel {
+    width: 280px;
+    right: -280px;
+  }
+
+  #toc-toggle:checked ~ .toc-panel {
+    transform: translateX(-280px);
+  }
+
+  .toc-content a {
+    padding: 0.4rem 0.8rem;
+  }
+}

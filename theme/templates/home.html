@@ -2,8 +2,6 @@
 {% block title %}{{ metadata.title | title }}{% endblock title %}
 {% block content %}
 {{ content | safe }}
-
-{# Latest 5 non-draft blog posts, ordered automatically by date #}
 <section>
   <div class="flex-container">
     {% for post in posts %}

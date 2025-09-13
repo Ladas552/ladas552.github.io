@@ -1,8 +1,8 @@
-@import "font.css";
 @import "code-blocks.css";
 @import "font.css";
 @import "footer.css";
 @import "nav-bar.css";
+@import "toc.css";
 
 html {
   scroll-behavior: smooth;
