@@ -1,0 +1,38 @@
+@document.meta
+title: Experience From BOOX Go Color 7
+description: Review of my first E-ink tablet
+authors: [
+  ladas552
+]
+categories: [
+  hardware
+  e-ink
+]
+created: 2025-09-13T19:33:08+05:00
+updated: 2025-09-13T20:14:45
+draft: true
+layout: post
+version: 1.1.1
+@end
+
+* My First E-ink device
+** Briefly about it, if you hate reading as much as I do
+   *Boox Go Color 7 version 1* (2024), is a nice Android Tablet, even if kinda costly.
+*** Pros:
+   - You can install any apps on it, including alternative browsers, dictionaries, VPN;
+   - Install any ttf font family for interface;
+   - Holds charge for around 2 weeks, if you don't use front light and don't browse internet on it;
+   - Has good default apps, like ebook reader that I use for Epubs and PDFs;
+   - Can connect to servers such as Nextcloud and Zotero to have cloud storage and sync;
+   - And can be used without entering the Boox account, even if the store page will always be on your home screen as a reminder;
+   - Width is about 2 phones, but lightly lies in one hand, holding while doing something isn't a problem;
+
+   Can be used for both scrollable content, but the text rendering quality will be lower. As also for page layouts, which is preferable for the color accuracy, and crisp quality.
+
+   Also worth noting - the Boox UI allows for acceptable customizability to make interface and reading experience more comfortable.
+
+*** Cons, go as follows:
+
+   - Costly, it feels cheap to hold and use. Being purly plastic, without screen protection ootb doesn't help much, I am afraid of letting it go without attention because I fear a person just sitting on it will cause tha tablet to snap like a post box;
+   - Obviously get a V2, but make sure it wasn't overshadowed by another Boox release because they like releasing new versions unannounced, more on that later;
+   - If you want to use it as a Dumb Phone - *stop*. It's not just slow on Input, it also can eat keyboard strokes. So Chatting and Note Taking are dead. 
