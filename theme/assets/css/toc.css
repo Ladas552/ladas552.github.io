@@ -112,7 +112,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 842px) {
   .toc-button {
     display: none; /* Hide button on small screens */
   }
