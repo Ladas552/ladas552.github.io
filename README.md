@@ -14,7 +14,7 @@ modified nerdfontsOnlySymbols file with fontforge-gtk to only have like 4 symbol
 
 - add code block expansion
 - better nav bar, add some flair to background color
-- Table of Content can rended too long for the user to use on small width phone with a lot of headings. So need to fix that, but don't make the table scrollable. I hate that
+- Table of Content can render too long for the user to use on small width phone with a lot of headings. So I hid it on small width devices. But there is probably a better way for it, without making ToC scrollable because that would be 1000 times worse
 - Pokemons aren't centered
 - I want a [project oriented pages too](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages#using-a-custom-domain-across-multiple-repositories)
 - better rss.xml theme, like [boltless](https://github.com/boltlessengineer/boltlessengineer.github.io/blob/989b409505d56f2c9fcbaf3cec1db8aac52156c7/templates/rss.xml#L2)

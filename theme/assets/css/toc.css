@@ -114,25 +114,14 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .toc-button {
-    width: 32px;
-    height: 32px;
-    right: 10px;
-  }
-
-  #toc-toggle:checked ~ .toc-button {
-    right: 295px;
+    display: none; /* Hide button on small screens */
   }
 
   .toc-panel {
-    width: 280px;
-    right: -280px;
+    display: none; /* Hide panel on small screens */
   }
 
-  #toc-toggle:checked ~ .toc-panel {
-    transform: translateX(-280px);
-  }
-
-  .toc-content a {
-    padding: 0.4rem 0.8rem;
+  .overlay {
+    display: none; /* Hide overlay on small screens */
   }
 }
