@@ -1,0 +1,31 @@
+@document.meta
+title: Impermanence on NixOS with ZFS and tmpfs
+description: Guide for my impermanence setup
+authors: [
+  ladas552
+]
+categories: [
+  Nix
+]
+created: 2025-09-27T15:05:22+05:00
+updated: 2025-09-27T15:20:18
+draft: true
+layout: post
+version: 1.1.1
+@end
+
+* Impermanence
+** What is Impermanence
+   It wipes your /root on reboot and your startup is a blank canvas, but you can persist mounts and bind mount directories from it in your normal root to save stuff like cache and tokens. So you wipe all the junk and save actually useful stuff. 
+
+   For example you can install full KDE Plasma session, run it, and if you get bored. Just disable it and no KDE junk left.
+*** Why use Impermanence
+    Makes system reproducable by disabling any imperative changes, and makes you think what your system actually has.
+*** Why did you set it up
+    I was bored. I don't find benefits of impermanence so crucial to compleatly overhoul how your system behavies and I don't trust myself to mantain it.
+
+    But again, I was really bored in hospital and made this work.
+*** What's the meaning of writing this page?
+    It's not that hard to setup impermanence, but to requires reading a lot of stuff, and if you don't use ZFS or BTRFS even full reinstall for rearanging partitions. I have read several articles, watched videos, and stole code from many github repos.
+
+    Plus most guides just go to the wipe stage right away, without saying how to persist, or how it practically works for the user to not loose their files. I will try to compete in these aspects.
