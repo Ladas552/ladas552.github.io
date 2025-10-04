@@ -6,7 +6,7 @@
     <description>Latest posts</description>
     <generator>Norgolith</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Sep 2025 04:47:22 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Oct 2025 19:24:04 +0000</lastBuildDate>
     <ttl>60</ttl>
     <atom:link href="https:&#x2F;&#x2F;ladas552.me/rss.xml" rel="self" type="application/rss+xml" />
 
@@ -30,16 +30,6 @@
     </item>
     
     <item>
-      <title>On Owning a Cat</title>
-      <link>https://ladas552.me/posts/on_owning_a_cat/</link>
-      <guid>https://ladas552.me/posts/on_owning_a_cat/</guid>
-      <description>Troublesome blob of feline species</description>
-      <author>Ladas552</author>
-      <pubDate>Sat, 08 Feb 2025 00:00:00 +0000</pubDate>
-      <category>story-time</category>
-    </item>
-    
-    <item>
       <title>Osu on Linux</title>
       <link>https://ladas552.me/posts/Osu_On_Linux/</link>
       <guid>https://ladas552.me/posts/Osu_On_Linux/</guid>
@@ -47,6 +37,16 @@
       <author>Ladas552</author>
       <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
       <category>games</category>
+    </item>
+    
+    <item>
+      <title>On Owning a Cat</title>
+      <link>https://ladas552.me/posts/on_owning_a_cat/</link>
+      <guid>https://ladas552.me/posts/on_owning_a_cat/</guid>
+      <description>Troublesome blob of feline species</description>
+      <author>Ladas552</author>
+      <pubDate>Sat, 08 Feb 2025 00:00:00 +0000</pubDate>
+      <category>story-time</category>
     </item>
     
   </channel>
