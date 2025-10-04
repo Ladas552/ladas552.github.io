@@ -22,7 +22,7 @@ required = [ "title", "description", "authors", "categories" ]
 
 ## field rules
 [content_schema.fields]
-title = { type = "string", max_length = 30 }
+title = { type = "string", max_length = 40 }
 description = { type = "string", max_length = 100 }
 categories = { type = "array", items = { type = "string" }, min_items = 1 }
 

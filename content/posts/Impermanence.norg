@@ -7,25 +7,74 @@ authors: [
 categories: [
   Nix
 ]
-created: 2025-09-27T15:05:22+05:00
-updated: 2025-09-27T15:20:18
+created: 2025-09-27
 draft: true
 layout: post
 version: 1.1.1
 @end
-
 * Impermanence
 ** What is Impermanence
    It wipes your /root on reboot and your startup is a blank canvas, but you can persist mounts and bind mount directories from it in your normal root to save stuff like cache and tokens. So you wipe all the junk and save actually useful stuff. 
 
    For example you can install full KDE Plasma session, run it, and if you get bored. Just disable it and no KDE junk left.
 *** Why use Impermanence
-    Makes system reproducable by disabling any imperative changes, and makes you think what your system actually has.
+    Makes system reproducible by disabling any imperative changes, and makes you think what your system actually has.
+
+    Only snapshot and back up things you care about, not cache or login details.
 *** Why did you set it up
-    I was bored. I don't find benefits of impermanence so crucial to compleatly overhoul how your system behavies and I don't trust myself to mantain it.
+    I was bored. I don't find benefits of impermanence so crucial to completely overhaul how your system behaves and I don't trust myself to maintain it.
 
     But again, I was really bored in hospital and made this work.
 *** What's the meaning of writing this page?
-    It's not that hard to setup impermanence, but to requires reading a lot of stuff, and if you don't use ZFS or BTRFS even full reinstall for rearanging partitions. I have read several articles, watched videos, and stole code from many github repos.
+    It's not that hard to setup impermanence, but to requires reading a lot of stuff, and if you don't use ZFS or BTRFS even full reinstall for rearranging partitions. I have read several articles, watched videos, and stole code from many GitHub repos.
 
     Plus most guides just go to the wipe stage right away, without saying how to persist, or how it practically works for the user to not loose their files. I will try to compete in these aspects.
+** What we need?
+*** Partitions
+    A new way to manage your system. NixOS.
+
+    Tho you probably already use NixOS if you are reading this, if you don't then get out while you can.
+
+    On a more serious note, you need ZFS setup, with 2 particular datasets.
+    @code nix
+    fileSystems = {
+      "/nix" = {
+        device = "zroot/nix";
+        fsType = "zfs";
+      };
+      "/tmp" = {
+        device = "zroot/tmp";
+        fsType = "zfs";
+      };
+    };
+    @end
+
+    If you don't have them, but have ZFS installed, just create them using commands
+    @code sh
+    sudo zfs create -o mountpoint=legacy zroot/tmp
+    sudo zfs create -o mountpoint=legacy zroot/nix
+    @end
+
+    This will insure that you won't delete your `/nix/store` and it stays intact between reboots. And for this particular setup the `tmp` dataset will be used so out `tmpfs` *root* will insure that it won't randomly overload.
+
+    This is a starting point, unless you have *ZFS setup* on your *NixOS* with separate datasets like that, you can kiss this Guide goodbye.
+
+*** Impermanence module
+    The [Impermanence module]{https://github.com/nix-community/impermanence} is a NixOS flake that creates `mount binds`. I still don't understand how they work, but it isn't a big idea here. The main purpose of it is to just put stuff in special `/persist` dataset, and still be able to access it from `/root` and `/home`.
+
+    Basically you define certain directories names in it, and it creates them, then binds them to specific relevant locations, like `".config/nvim"` will be located in `~/.config/nvim`. And if you put your Neovim config there, neovim will still follow the config, but it will be located on different dataset, and won't be wiped on boot. 
+
+    Neat right? Not really, because if directory already exists, Impermanence will override that old directory with new empty one. *Don't panic*. Data isn't lost, it was just reallocated, you can delete the directory from impermanence module and it will comeback. 
+
+    That's the main reason why most people reinstall their OS if they want to use Impermanence, because it's a pain in the glands to move the files from directories before persisting it and moving things back. There are projects that circumvent that, but I didn't use them. For example: [Persist-retro]{https://github.com/Geometer1729/persist-retro}.
+
+    Also to persist an individual file, you need to move the file, and manually copy it to persist directory. 
+
+**** You forgot to tell installation instructions
+     It's nix so here is just a snippet of code. Works for flakes.
+     @code nix
+     #flake.nix
+     {
+       inputs.impermanence.url = "github:nix-community/impermanence";
+     }
+     @end
