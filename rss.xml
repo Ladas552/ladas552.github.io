@@ -6,7 +6,7 @@
     <description>Latest posts</description>
     <generator>Norgolith</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Oct 2025 19:24:04 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Nov 2025 11:59:48 +0000</lastBuildDate>
     <ttl>60</ttl>
     <atom:link href="https:&#x2F;&#x2F;ladas552.me/rss.xml" rel="self" type="application/rss+xml" />
 
@@ -37,6 +37,16 @@
       <author>Ladas552</author>
       <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
       <category>games</category>
+    </item>
+    
+    <item>
+      <title>My &quot;Secure&quot; Setup</title>
+      <link>https://ladas552.me/posts/My_secure_setup/</link>
+      <guid>https://ladas552.me/posts/My_secure_setup/</guid>
+      <description>Horrible practices or Guide to exploiting my OS if you ever want to</description>
+      <author>Ladas552</author>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 +0000</pubDate>
+      <category>Linux</category>
     </item>
     
     <item>
