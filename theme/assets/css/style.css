@@ -75,7 +75,7 @@ h7::before {
 /* Main content of the page */
 .content{
   width: auto;
-  max-width: 650px;
+  max-width: 750px;
   margin: 40px auto;
   padding: 0 0;
   height: 100%;
@@ -83,7 +83,7 @@ h7::before {
   flex-direction: column;
   box-sizing: border-box;
   position: relative;
-  line-height: auto;
+  line-height: 1.5em;
   text-align: auto;
   text-justify: inter-word;
 }
