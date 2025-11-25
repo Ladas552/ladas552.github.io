@@ -1,0 +1,44 @@
+@document.meta
+title: My experience with Ajazz 960A 
+description: I used a cheap mechanical keyboard for 2 years
+authors: ladas552
+categories: [
+  hardware
+]
+created: 2025-11-25
+updated: 2025-11-25T15:21:09
+draft: true
+layout: post
+version: 1.1.1
+@end
+* Ajazz 960A or how I fell in love with mechanical keyboards
+** HELLo!
+   I switched my Ajazz to Nuphy, currently using Nuphy for a week, but Ajazz was my first mechanical keyboard, and I gotta express how nice it was even tho it's *cheap as hell*. So consider this an advice and prerequisites to getting your first mechanical keyboard. All the nuances I encountered when using it on *Linux/Windows* for over *2 years*
+
+** Review
+*** TLDR
+    Solid, full plastic so it's light. Quite big to transport in laptop bag. Loud even with Linear Red switches. Works fine for gaming and writing. Cheap. just 40$ or 25$ on *sale*.
+*** Build
+    Gasket mount with hot swappable keys. I got a version without back lights, but it's available with RGB or White LEDs if you want to. They cost just 10$ more at the time of writing. 
+
+    The Build is full plastic, but solid enough to withstand falling over the table, multiple times a year(/I got them clumsy hands/). So keyboard doesn't wobble, doesn't feel cheap nor expensive, average on all fronts. 
+
+    But I had to change out the keycaps because the edges are too sharp. Felt like I was torturing my fingers when I slide on them. If I don't misunderstand, they went for *Cherry style* keycaps. I bought an XDA set of keycaps, and gray looked better on white keyboard anyways. They were fully compatible. Here is a [link to AliExpress page]{https://ali.click/dq8rq5} if you are interested. Tho funny thing, when I replaced some keys with icons, people asked what thous do, even tho they were just keys but with different keycaps. 
+
+*** Wireless
+    I primarily used wireless dongle. Bluetooth worked on phone, but with slight delay, and 2.4Gz dongle had almost no delay. I could even use it for playing OSU!. Tho if it was obstructed by pillows or concrete it couldn't connect. but otherwise pretty solid connection. 
+
+    Dongle didn't work on mobile devices however, only Bluetooth worked on thous. Probably how it was design. But meh my dream quirky setup of having a USBa to USBc adapter connect Dongle and phone was shunned.
+
+*** Wired
+    The default cable is kinda hard to connect, because it got notches, plus it's not double sided USBc, but a USBa on one end. Otherwise, it didn't rip with gentle care, can't really say a lot about average cable, except that it get's dirty quickly. Wipe it out with a wet tissue, and should be good again.
+
+*** Customization. 
+    As I said, I changed the keycaps. But also because it's hot swappable keyboard, you can change switches too. I went for Silver CherryMX for some keys, namely EDFTUJKI for *rhythm games*. I tried to check out the insides too, but the gasket mount seem to sit really tight, plus the hinges on it don't suggest it is meant to be open. So I just gave up on the idea of mods. They keyboard is also *not QMK*, and the Ajazz's firmware is kinda ass, not much to change and it's Windows only. 
+
+    Yeah, don't ask much from Chinese products or so I learned with them. Cheap products are rarely customizeable anyways, and come as is. 
+
+*** Typing experience
+    As it is my first 
+
+    *lunch break* lol 15:27 2025-11-25
