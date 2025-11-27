@@ -13,3 +13,5 @@ version: 1.1.1
 
 * HiO!
   This is the *Site/Blog* of {:/meta/about:}[Ladas552] - have fun browsing it and read some recent posts below!
+
+  To note: I am not interested in your data, *github hosting* does it's own things. The Site's javascript only exists to redirect on safari browser users and for the footer to check client side scrolling.

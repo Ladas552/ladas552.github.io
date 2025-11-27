@@ -6,7 +6,7 @@ categories: [
   hardware
 ]
 created: 2025-11-25
-updated: 2025-11-25T15:21:09
+updated: 2025-11-27T17:01:53
 draft: true
 layout: post
 version: 1.1.1
@@ -38,7 +38,33 @@ version: 1.1.1
 
     Yeah, don't ask much from Chinese products or so I learned with them. Cheap products are rarely customizeable anyways, and come as is. 
 
-*** Typing experience
-    As it is my first 
+** Usage
+*** Typing
+    Right of the bed, I don't write a lot, nor I have to use an arm rests or other stuff. I don't even follow home row typing practices. So my typing experience is only about mechanical implications. For example: I love having *lots of keys*! 
 
-    *lunch break* lol 15:27 2025-11-25
+    It's a 1800-layout keyboard, which basically means it's full-size but with tighter key layout. Makes it easy to balance the board on my lap. And each key is really sensitive, so doesn't need lots of force to type. Considering there is no rebound on this keyboard, and the springs  are pretty stiff, it makes fingers hurt a lot less during typing.
+
+   But that's also the catch, because it can lead to double taps if you fingers aren't quick enough to lift. Also I noticed that in bluetooth mode, the keys can *double tap*, so be careful about that on your phone.
+
+*** Utility
+    So it got a knob, *the best thing since sliced bread*, if we  assume sliced bread also has a knob. I used it everyday. It feels so nice to rotate, it got little mechanical feedback. By default it outputs the `XF86AudioRaiseVolume` and `XF86AudioLowerVolume` respectively. But, thous are just keys! You can assign anything to thous keys, for example: I added keybind with a mod key to adjust brightness on my niri.
+
+    @code nix
+    ## Brightness with a knob
+    "Super+XF86AudioRaiseVolume" = {
+    allow-when-locked = true;
+    action = spawn [
+    "brightnessctl"
+    "set"
+    "2%+"
+    ];
+    };
+    "Super+XF86AudioLowerVolume" = {
+    allow-when-locked = true;
+    action = spawn [
+    "brightnessctl"
+    "set"
+    "2%-"
+    ];
+    };
+    @end
