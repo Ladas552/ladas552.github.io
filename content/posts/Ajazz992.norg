@@ -54,19 +54,24 @@ version: 1.1.1
     @code nix
     ## Brightness with a knob
     "Super+XF86AudioRaiseVolume" = {
-    allow-when-locked = true;
-    action = spawn [
-    "brightnessctl"
-    "set"
-    "2%+"
-    ];
+      allow-when-locked = true;
+      action = spawn [
+        "brightnessctl"
+        "set"
+        "2%+"
+      ];
     };
     "Super+XF86AudioLowerVolume" = {
-    allow-when-locked = true;
-    action = spawn [
-    "brightnessctl"
-    "set"
-    "2%-"
-    ];
+      allow-when-locked = true;
+      action = spawn [
+        "brightnessctl"
+        "set"
+        "2%-"
+      ];
     };
     @end
+
+*** Portability
+    Well, It's quite wide, so I can only fit it in my backpack and not in a laptop bag. It's quite quite loud, so I can only use it in crowded spaces and not in a classroom. It's quite quite quite not so problematic to deal with tbh, because it's light and I am not about to type on anything other than mechanical keyboard after it.
+
+    It's quite fancy to type notes and essays on keyboard, bluetooth connection helps. And it takes like 4 weeks for battery to run dry
