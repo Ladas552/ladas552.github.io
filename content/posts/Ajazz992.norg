@@ -1,20 +1,22 @@
 @document.meta
-title: My experience with Ajazz 960A 
+title: My experience with Ajazz 992 
 description: I used a cheap mechanical keyboard for 2 years
 authors: ladas552
 categories: [
   hardware
 ]
 created: 2025-11-25
-updated: 2025-11-27T17:01:53
 draft: true
 layout: post
 version: 1.1.1
 @end
-* Ajazz 960A or how I fell in love with mechanical keyboards
+* Ajazz 992 or how I fell in love with mechanical keyboards
 ** HELLo!
    I switched my Ajazz to Nuphy, currently using Nuphy for a week, but Ajazz was my first mechanical keyboard, and I gotta express how nice it was even tho it's *cheap as hell*. So consider this an advice and prerequisites to getting your first mechanical keyboard. All the nuances I encountered when using it on *Linux/Windows* for over *2 years*
+** Why I switched to Mechanical Keyboards
+   So basically I was playing on my A4Tech keyboard. You know the ones. Cheap membrane, greese, max 2 key pressed at the same time. And I noticed that it ate my inputs when I was tapping burts in Osu. 
 
+   Basically keyboard broke, so I had to find a new one. "Might as well try some mechanical ones that I watched so many videos about". And I end up searching for a numpad 
 ** Review
 *** TLDR
     Solid, full plastic so it's light. Quite big to transport in laptop bag. Loud even with Linear Red switches. Works fine for gaming and writing. Cheap. just 40$ or 25$ on *sale*.
@@ -44,7 +46,7 @@ version: 1.1.1
 
     It's a 1800-layout keyboard, which basically means it's full-size but with tighter key layout. Makes it easy to balance the board on my lap. And each key is really sensitive, so doesn't need lots of force to type. Considering there is no rebound on this keyboard, and the springs  are pretty stiff, it makes fingers hurt a lot less during typing.
 
-   But that's also the catch, because it can lead to double taps if you fingers aren't quick enough to lift. Also I noticed that in bluetooth mode, the keys can *double tap*, so be careful about that on your phone.
+    But that's also the catch, because it can lead to double taps if you fingers aren't quick enough to lift. Also I noticed that in bluetooth mode, the keys can *double tap*, so be careful about that on your phone.
 
 *** Utility
     So it got a knob, *the best thing since sliced bread*, if we  assume sliced bread also has a knob. I used it everyday. It feels so nice to rotate, it got little mechanical feedback. By default it outputs the `XF86AudioRaiseVolume` and `XF86AudioLowerVolume` respectively. But, thous are just keys! You can assign anything to thous keys, for example: I added keybind with a mod key to adjust brightness on my niri.
