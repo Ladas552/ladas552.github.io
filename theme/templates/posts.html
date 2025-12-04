@@ -2,19 +2,26 @@
 {% block title %}{{ metadata.title | title }}{% endblock title %}
 {% block content %}
 <h1 class="text-center">Posts</h1>
-<div class="mt-6 lg:mt-8 break-keep">
-  {% for post in posts | slice(end=5) %}
-  <div class="bg-surface p-4 mt-4 border-2 border-base-alt rounded-md shadow-lg">
-    <div class="flex flex-col">
-      <h3 class="mt-0! text-text-alt"><a class="no-underline! hover:underline! hover:decoration-dashed" href="{{ post.permalink }}">{{ post.title }}</a></h3>
-      <time class="text-dark-grey dark:text-grey" datetime="{{ post.created }}">{{ post.created | date(format="%B %e, %Y") }}</time>
-      <span class="text-sm text-grey italic">{{ post.description }}</span>
+<section>
+  <div class="flex-container">
+    {% set sorted_posts = posts | sort(attribute="created") | reverse %}
+    {% for post in sorted_posts %}
+    <div class="flex-box animated-card" style="animation-delay: {{ loop.index0 * 100 }}ms;"
+      onclick="location.href='{{ post.permalink }}';">
+      <h3>{{ post.title }}</h3>
+      <div id="description">
+        <description>
+          <span>{{ post.description }}</span>
+          <p>Tags:
+            {% for category in post.categories %}
+            <a href="/categories/{{ category }}">{{ category | capitalize }}</a>
+            {% endfor %}
+          </p>
+          <p><span>Released: {{ post.created | date(format="%Y-%m-%d") }}</span></p>
+        </description>
+      </div>
     </div>
-    <div class="flex flex-col">
-      <p>{{ post.raw | striptags | truncate(length=100) | safe }}</p>
-      <a class="no-underline! text-dark-grey font-semibold" href="{{ post.permalink }}">Read more …</a>
-    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
-</div>
+</section>
 {% endblock content %}

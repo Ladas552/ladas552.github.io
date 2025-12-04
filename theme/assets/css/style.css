@@ -160,6 +160,26 @@ strong {
   bottom: 5px;
 }
 
+/* View All Posts Button */
+.view-all-container {
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+.view-all-btn {
+  display: inline-block;
+  padding: 0.8em 2em;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #cad3f5;
+  text-decoration: none;
+  border: 2px solid #8aadf4;
+  border-radius: 20px;
+  background-color: #1e2030;
+  position: relative;
+  bottom: 0px;
+}
 /* css class for descriptions under "recent posts" */
 .flex-box p {
   color: #b7bdf8;

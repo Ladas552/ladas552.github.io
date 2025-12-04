@@ -4,21 +4,26 @@
 {{ content | safe }}
 <section>
   <div class="flex-container">
-    {% for post in posts %}
+    {% set latest_posts = posts | sort(attribute="created") | reverse | slice(end=2) %}
+    {% for post in latest_posts %}
     <div class="flex-box" onclick="location.href='{{ post.permalink }}';" style="cursor: pointer;">
       <h3>{{ post.title }}</h3>
       <div id=description>
         <description>
-        <span>{{ post.description }}</span>
-        <p>Tags:
-        {% for category in post.categories %}
-        <a href="/categories/{{ category }}">{{ category | capitalize }}</a>
-        {% endfor %}</p>
-        <p><span>Released: {{ post.created }}</span></p>
+          <span>{{ post.description }}</span>
+          <p>Tags:
+            {% for category in post.categories %}
+            <a href="/categories/{{ category }}">{{ category | capitalize }}</a>
+            {% endfor %}
+          </p>
+          <p><span>Released: {{ post.created }}</span></p>
         </description>
       </div>
     </div>
     {% endfor %}
+  </div>
+  <div class="view-all-container">
+    <a href="/posts" class="view-all-btn">View All Posts </a>
   </div>
 </section>
 
