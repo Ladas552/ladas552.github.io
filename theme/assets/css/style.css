@@ -16,48 +16,58 @@ html {
 }
 
 /* change color of headings */
-h1{
+h1 {
   color: #F5A97F;
   font-size: calc(1rem * pow(1.1, 4));
   text-align: center;
 }
-h2{
+
+h2 {
   color: #7DC4E4;
   font-size: calc(1.1rem * pow(1.1, 2));
 }
-h3{
+
+h3 {
   color: #F5A97F;
   font-size: calc(1rem * pow(1.1, 1));
 }
-h4{
+
+h4 {
   color: #A6DA95;
   font-size: calc(1rem * pow(1.0, 1));
 }
-h5{
+
+h5 {
   color: #7DC4E4;
   font-size: calc(1rem * pow(1.1, 0));
 }
+
 h6 {
   color: #7DC4E4;
   font-size: calc(1rem * pow(1.1, -1));
 }
 
 /* add your own norg icons here*/
-h2::before{
+h2::before {
   content: '◉ ';
 }
-h3::before{
+
+h3::before {
   content: '◎ ';
 }
-h4::before{
+
+h4::before {
   content: '○ ';
 }
-h5::before{
+
+h5::before {
   content: '✺ ';
 }
-h6::before{
+
+h6::before {
   content: '▶ ';
 }
+
 h7::before {
   content: '⤷ ';
 }
@@ -73,7 +83,7 @@ h7::before {
 }
 
 /* Main content of the page */
-.content{
+.content {
   width: auto;
   max-width: 750px;
   margin: 40px auto;
@@ -96,6 +106,7 @@ h7::before {
 .content a:visited {
   color: #7E7EFF;
 }
+
 /* links colors on interactions */
 .content a:hover {
   color: #f38ba8;
@@ -106,7 +117,8 @@ h7::before {
 }
 
 /* make bold text red */
-.content b, strong {
+.content b,
+strong {
   color: #EE99A0;
 }
 
@@ -120,8 +132,9 @@ h7::before {
   justify-content: space-evenly;
   align-content: space-evenly;
   gap: 2em;
-	margin: 0 auto;
+  margin: 0 auto;
 }
+
 .flex-box {
   display: block;
   border-radius: 20px;
@@ -129,25 +142,29 @@ h7::before {
   background-color: #1e2030;
   padding: 0em 1em 1em 1em;
   box-shadow: 0px 0px 0.2em #8aadf4;
-  transition:box-shadow 400ms ease-in-out, bottom ease-in-out 600ms;
+  transition: box-shadow 400ms ease-in-out, bottom ease-in-out 600ms;
   width: 40%;
   height: auto;
   position: relative;
   bottom: 0px;
 }
+
 .flex-box:hover {
-  transition:box-shadow 600ms ease-in-out, bottom ease-in-out 600ms;
+  transition: box-shadow 600ms ease-in-out, bottom ease-in-out 600ms;
   box-shadow: 0px 0px 1.3em #8aadf4;
   bottom: 5px;
 }
+
 /* css class for descriptions under "recent posts" */
-.flex-box p{
+.flex-box p {
   color: #b7bdf8;
   font-size: 12px;
 }
-.flex-box h3::before{
+
+.flex-box h3::before {
   content: ' ';
 }
+
 /* classes for images */
 /* center images */
 .center {
@@ -157,20 +174,26 @@ h7::before {
   width: auto;
 }
 
-.pokemon {
-  flex-direction: row;
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 5em;
-  padding-bottom: 2em;
-  align-content: space-evenly;
+/* Only center containers that have pokemon images */
+.content>div:has(.pokemon) {
   text-align: center;
-  flex-direction: row;
+}
+
+.content>div:has(.pokemon)>*:not(.pokemon):not(h1) {
+  text-align: left;
+}
+
+/* Pokemon images spread equally */
+.pokemon {
+  display: inline-block;
+  width: 15%;
+  margin: 0.5em 2%;
+  text-align: center;
 }
 
 /* Customize the scrollbar */
 * {
-  scrollbar-width: thin; /* Width of the scrollbar */
+  scrollbar-width: thin;
+  /* Width of the scrollbar */
   scrollbar-color: #64687E #1E1E2E;
 }
