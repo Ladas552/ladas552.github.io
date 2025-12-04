@@ -1,26 +1,102 @@
 /* Navigation bar */
-.navigation ul {
+.navigation {
+  background-color: #1e2030;
+  padding: 0.5em 1.5em;
+  border-bottom: 1px solid #363a4f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+/* Site brand/title */
+.nav-brand {
+  flex: 1;
+}
+
+.nav-brand a {
+  color: #f5a97f;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 200ms ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.nav-brand .nav-icon {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.nav-brand a:hover {
+  color: #ee99a0;
+}
+
+/* Navigation links */
+.nav-links {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  display: flex;
+  gap: 0.25em;
+  flex: 1;
+  justify-content: center;
 }
 
-.navigation li {
-  float: left;
-}
-
-.navigation li a {
+.nav-links li a {
   display: block;
-  color: #9e7375;
-  text-align: center;
-  padding: 14px 16px;
+  color: #cad3f5;
+  padding: 0.5em 0.75em;
   text-decoration: none;
-  transition:background-color ease-in-out 400ms;
-  transition: background-color ease-in-out 250ms;
+  transition: background-color 200ms ease, color 200ms ease;
 }
 
-.navigation li a:hover {
-  background-color: #111;
-  color: white;
+.nav-links li a:hover {
+  background-color: #363a4f;
+  color: #f5a97f;
+}
+
+/* Icon links (GitHub, RSS, theme toggle) */
+.nav-icons {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.nav-icons li a {
+  color: #cad3f5;
+  padding: 0.5em;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 400ms ease, color 400ms ease;
+}
+
+.nav-icons li a:hover,
+.nav-icons li button:hover {
+  background-color: #363a4f;
+  color: #f5a97f;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .navigation {
+    justify-content: center;
+  }
+
+  .nav-brand {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-brand a {
+    justify-content: center;
+  }
 }
