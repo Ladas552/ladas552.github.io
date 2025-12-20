@@ -49,7 +49,7 @@ version: 1.1.1
     But that's also the catch, because it can lead to double taps if you fingers aren't quick enough to lift. Also I noticed that in bluetooth mode, the keys can *double tap*, so be careful about that on your phone.
 
 *** Utility
-    So it got a knob, *the best thing since sliced bread*, if we  assume sliced bread also has a knob. I used it everyday. It feels so nice to rotate, it got little mechanical feedback. By default it outputs the `XF86AudioRaiseVolume` and `XF86AudioLowerVolume` respectively. But, thous are just keys! You can assign anything to thous keys, for example: I added keybind with a mod key to adjust brightness on my niri.
+    So it got a knob, *the best thing since sliced bread*, if we  assume sliced bread also has a knob. I used it everyday. It feels so nice to rotate, it got little mechanical feedback. By default it outputs the `XF86AudioRaiseVolume` and `XF86AudioLowerVolume` respectively. But, thous are just keys! You can assign anything to them, for example: I added keybind with a mod key to adjust brightness on my niri.
 
     @code nix
     ## Brightness with a knob
